@@ -1,0 +1,377 @@
+= Documentation du Code
+:toc:
+:toc-title: Sommaire
+
+:Version: Finale
+:Auteurs: 
+:Date: 2023-10-01
+
+== Informations générales
+==== Version : {Version}  
+
+==== Auteurs 
+
+DA CHAO Romain, DUCRY Pierre-Louis, PELLEGATTA Matteo, RAZAFINIRINA Mialisoa
+
+==== Date 
+
+{Date}
+
+== Introduction
+
+Cette documentation technique fournit une vue d'ensemble du code source du logiciel de gestion des données de capteurs IoT. Elle explique l'architecture, les fonctions principales et le rôle des modules utilisés. Ce document est une mise à jour de la version précédente, intégrant les améliororations récentes apportées au projet.
+
+== Architecture globale
+
+Le programme est conçu pour traiter les données provenant de différents capteurs via MQTT. Les principaux composants sont :
+
+- **Connexion MQTT** : Se connecte au broker MQTT pour recevoir les données des capteurs.
+- **Traitement des données** : Identifie le type de capteur et applique un traitement spécifique.
+- **Filtrage et sauvegarde** : Filtre les données en fonction de seuils configurables et les sauvegarde dans des fichiers JSON.
+- **Gestion des alertes** : Génère des alertes lorsque les valeurs des capteurs dépassent les seuils définis.
+
+=== Diagramme de fonctionnement
+
+[Diagramme ou explication simplifiée du flux de données entre les composants]
+
+== Fichiers et modules  
+
+- `mainIOT.py` : Fichier principal contenant le code du programme.  
+- `config.ini` : Fichier de configuration contenant les paramètres MQTT et les seuils. 
+- `IOT/Final/datas/` : Répertoire où sont stockés les fichiers JSON générés par le programme.
+- `IOT/Final/alertes/` : Répertoire contenant les fichiers de logs d'alertes.
+
+== Dépendances
+
+Voici les bibliothèques utilisées :
+
+- `paho.mqtt.client` : Gère la connexion et la communication MQTT.
+- `json` : Lecture et écriture de données JSON.
+- `configparser` : Gestion des fichiers de configuration.
+- `datetime` : Gestion des dates et heures pour les logs.
+- `re` : Expressions régulières pour le traitement des données.
+- `os` : Opérations sur le système de fichiers.
+
+Pour installer la dépendance principale, exécutez :
+
+[source,bash]
+----
+pip install paho-mqtt
+----
+
+== Description des fonctions principales
+
+=== `on_connect(client, userdata, flags, rc)`
+
+[source,python]
+----
+def on_connect(client, userdata, flags, rc):
+    """
+    Gère la connexion au broker MQTT.
+
+    Args:
+        client (object): Instance du client MQTT.
+        userdata (object): Données utilisateur associées.
+        flags (dict): Drapeaux MQTT.
+        rc (int): Code de résultat de la connexion.
+    """
+    client.subscribe(topic_triphaso)
+    client.subscribe(topic_am107)
+    client.subscribe(topic_solaredge)
+    print("Abonné aux topics pour les capteurs.")
+----
+**Rôle** :
+
+- Vérifie le succès de la connexion au broker MQTT.
+- S’abonne aux topics spécifiés dans 
+
+config.ini
+
+ pour les différents types de capteurs.
+
+=== `on_message(client, userdata, msg)`
+
+[source,python]
+----
+def on_message(client, userdata, msg):
+    """
+    Traite les messages reçus via MQTT.
+
+    Args:
+        client (object): Instance du client MQTT.
+        userdata (object): Données utilisateur associées.
+        msg (object): Message reçu, contient le topic et le payload.
+    """
+    payload = json.loads(msg.payload.decode())
+    if msg.topic == topic_am107:
+        process_am107_data(payload)
+    elif msg.topic == topic_triphaso:
+        process_triphaso_data(payload)
+    elif msg.topic == topic_solaredge:
+        process_solaredge_data(payload)
+----
+**Rôle** :
+
+- Identifie le topic du message reçu pour déterminer le type de capteur.
+- Redirige les données vers les fonctions de traitement appropriées.
+
+=== `process_am107_data(payload)`
+
+[source,python]
+----
+def process_am107_data(payload):
+    """
+    Traite les données des capteurs AM107.
+
+    Args:
+        payload (dict): Données du capteur AM107.
+    """
+    data_list = payload.get('data', [])
+    donnee_filtree(data_list, 'config.ini', 'IOT/Final/datas/AM107_filtre_data.json')
+----
+**Rôle** :
+
+- Analyse les données des capteurs AM107.
+- Vérifie les seuils et ajoute des alertes si nécessaire.
+- Appelle la fonction `donnee_filtree` pour filtrer et sauvegarder les données.
+
+=== `donnee_filtree(data_list, config_file, output_file)`
+
+[source,python]
+----
+def donnee_filtree(data_list, config_file='config.ini', output_file='AM107_filtre_data.json'):
+    """
+    Filtre les données en fonction des seuils définis dans la configuration.
+
+    Args:
+        data_list (list): Liste des données à traiter.
+        config_file (str): Chemin vers le fichier de configuration.
+        output_file (str): Chemin vers le fichier JSON de sortie.
+    """
+    # Chargement des seuils depuis le fichier de configuration
+    config = configparser.ConfigParser()
+    config.read(config_file)
+    seuils = {key: float(value) for key, value in config['thresholds'].items()}
+    # Traitement et filtrage des données
+    # Gestion des alertes si les seuils sont dépassés
+----
+**Rôle** :
+
+- Charge les seuils depuis le fichier de configuration.
+- Filtre les données en comparant les valeurs aux seuils.
+- Enregistre les données filtrées dans un fichier JSON.
+- Génère des alertes si les valeurs dépassent les seuils.
+
+=== `extraire_chiffres_et_points(chaine)`
+
+[source,python]
+----
+def extraire_chiffres_et_points(chaine):
+    """
+    Extrait les chiffres et les points d'une chaîne pour générer un nombre flottant.
+
+    Args:
+        chaine (str): La chaîne à traiter.
+
+    Returns:
+        str: La chaîne contenant uniquement les chiffres et les points.
+    """
+    return re.sub(r'[^0-9.]', '', chaine)
+----
+**Rôle** :
+
+- Nettoie les données en supprimant les caractères non numériques.
+- Assure que les valeurs numériques sont correctement interprétées pour le traitement.
+
+=== `process_solaredge_data(payload)`
+
+[source,python]
+----
+def process_solaredge_data(payload):
+    """
+    Traite les données du capteur SolarEdge.
+
+    Args:
+        payload (dict): Données du capteur SolarEdge.
+    """
+    # Définir le chemin du fichier de sortie
+    output_file = 'IOT/Final/datas/Solaredge_filtre_data.json'
+    # Traitement spécifique des données SolarEdge
+    # Sauvegarde des données filtrées
+----
+**Rôle** :
+
+- Gère le traitement des données spécifiques au capteur SolarEdge.
+- Filtre et sauvegarde les données conformément aux seuils définis.
+
+== Extrait de code principal (`mainIOT.py`)
+
+Voici un extrait du code source pour illustrer certaines des fonctions décrites :
+
+[source,python]
+----
+if standardized_key == "room":
+    room_value = value.strip().lower()
+    # Si room_filter est égal à '0', on bypass le filtre sur la salle
+    if room_filter == '0' or room_value == room_filter:
+        room_matched = True
+    continue
+
+if standardized_key in correspondances.keys():
+    value_float = float(extraire_chiffres_et_points(value))
+    filtered_data[standardized_key] = value_float
+
+    if standardized_key in ['tvoc', 'illumination', 'pressure']:
+        # Si la valeur est inférieure au seuil pour ces paramètres
+        if value_float < seuils[correspondances[standardized_key]]:
+            alert_log.append(f"Alerte: {standardized_key} ({value_float}) est inférieur au seuil ({seuils[correspondances[standardized_key]]}) à {datetime.now()}")
+    else:
+        # Si la valeur est supérieure au seuil pour ces paramètres
+        if value_float > seuils[correspondances[standardized_key]]:
+            alert_log.append(f"Alerte: {standardized_key} ({value_float}) dépasse le seuil ({seuils[correspondances[standardized_key]]}) à {datetime.now()}")
+
+# Sauvegarde dans un fichier JSON uniquement si la salle correspond ou si room_filter est '0'
+if room_matched or room_filter == '0':
+    with open(output_file, 'w', encoding='utf-8') as json_file:
+        json.dump(filtered_data, json_file, ensure_ascii=False, indent=4)
+
+# Sauvegarde des alertes dans un fichier si des alertes existent
+if alert_log:
+    alert_log_file = config['alerts']['alert_log_file']
+    with open(alert_log_file, 'a', encoding='utf-8') as alert_file:
+        for alert in alert_log:
+            alert_file.write(alert + '\n')
+----
+
+== Exemple de flux de données
+
+1. **Connexion MQTT** : Le script se connecte au broker MQTT et s'abonne aux topics définis.
+2. **Réception des données** : Les messages MQTT sont reçus et traités par la fonction `on_message`.
+3. **Traitement spécifique** : Les données sont traitées selon le type de capteur (`process_am107_data`, `process_triphaso_data`, `process_solaredge_data`).
+4. **Filtrage et sauvegarde** : Les données sont filtrées via `donnee_filtree` et enregistrées sous forme de fichiers JSON.
+5. **Gestion des alertes** : Des alertes sont générées et enregistrées si les valeurs dépassent les seuils.
+
+== Structure des fichiers JSON
+
+=== AM107_filtre_data.json
+[source,json]
+----
+{
+    "temperature": 20.6,
+    "humidity": 53.0,
+    "co2": 488.0,
+    "tvoc": 260.0,
+    "illumination": 2.0,
+    "pressure": 1000.6
+}
+----
+
+=== Triphaso_filtre_data.json
+[source,json]
+----
+{
+    "puissance_active_positive": 1045.0,
+    "puissance_reactive_negative": 271.0,
+    "energie_active_positive": 5766598.0,
+    "energie_reactive_negative": 2135487.0
+}
+----
+
+=== Solaredge_filtre_data.json
+[source,json]
+----
+{
+    "solar": {
+        "0": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 7653.0
+            },
+            "lastMonthData": {
+                "energy": 48738.0
+            },
+            "lastYearData": {
+                "energy": 2983144.0
+            },
+            "lifeTimeData": {
+                "energy": 3464174.0
+            },
+            "lastUpdateTime": "2024-12-06 20:37:00"
+        },
+        "1": {
+            "currentPower": {
+                "power": 451.37173
+            },
+            "lastDayData": {
+                "energy": 566.0
+            },
+            "lastMonthData": {
+                "energy": 49304.0
+            },
+            "lastYearData": {
+                "energy": 2983710.0
+            },
+            "lifeTimeData": {
+                "energy": 3464740.0
+            },
+            "lastUpdateTime": "2024-12-07 11:28:43"
+        },
+        "2": {
+            "currentPower": {
+                "power": 361.09244
+            },
+            "lastDayData": {
+                "energy": 729.0
+            },
+            "lastMonthData": {
+                "energy": 49467.0
+            },
+            "lastYearData": {
+                "energy": 2983873.0
+            },
+            "lifeTimeData": {
+                "energy": 3464903.0
+            },
+            "lastUpdateTime": "2024-12-07 11:52:32"
+        },
+        "3": {
+            "currentPower": {
+                "power": 361.09244
+            },
+            "lastDayData": {
+                "energy": 729.0
+            },
+            "lastMonthData": {
+                "energy": 49467.0
+            },
+            "lastYearData": {
+                "energy": 2983873.0
+            },
+            "lifeTimeData": {
+                "energy": 3464903.0
+            },
+            "lastUpdateTime": "2024-12-07 11:52:32"
+        }
+    }
+}
+----
+
+  
+== Pratiques de documentation intégrées
+
+Le code contient des docstrings pour les fonctions clés. Ces docstrings suivent les conventions Python et peuvent être utilisées avec des outils comme Sphinx pour générer une documentation complète.
+
+== Instructions pour tester le code  
+
+1. **Configurer MQTT** : Vérifiez que `config.ini` contient les bonnes informations pour le broker et les topics.  
+2. **Exécuter le script** :  
+   ```bash
+   python3 mainIOT.py
+4. **Vérifier les fichiers de sortie** : Consultez les fichiers JSON dans `IOT/Final/datas/` et les logs d'alertes dans `IOT/Final/alertes/`.
+5. **Simuler des données** : Si nécessaire, utilisez un outil pour publier des messages MQTT sur les topics correspondants afin de tester le traitement.
+
+== Conclusion
+
+Cette documentation fournit une vue d'ensemble complète du code, de son fonctionnement et de ses principales fonctions. Elle sert de référence pour les développeurs souhaitant contribuer ou maintenir le projet. Les améliorations apportées visent à renforcer la robustesse et la flexibilité du programme, tout en facilitant son évolution future.

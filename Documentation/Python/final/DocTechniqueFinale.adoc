@@ -1,0 +1,143 @@
+= Document Technique : Gestion des Données IoT avec Python
+Entreprise : *Votre Entreprise*  
+Équipe : *Nom de l'équipe*  
+
+Auteur : [Votre nom]  
+Date : [Date]  
+
+:toc:  
+:toc-title: Sommaire  
+
+== I. Présentation du Code  
+
+Ce document décrit le fonctionnement d’un script Python conçu pour gérer des données provenant de capteurs IoT via un serveur MQTT.  
+
+=== Fonctionnalités Principales  
+* Extraction des données des capteurs (AM107, Triphaso, SolarEdge).  
+* Filtrage des données basé sur des seuils configurables.  
+* Sauvegarde des résultats dans des fichiers JSON et logs système.  
+
+== II. Description des Ressources  
+
+=== Environnement Requis  
+* **Système d’exploitation** : Linux ou Windows  
+* **Version Python** : 3.x  
+* **IDE Recommandé** : Visual Studio Code  
+
+=== Bibliothèques et Dépendances  
+[source,python]  
+----  
+paho-mqtt  
+json  
+configparser  
+datetime  
+----  
+
+== III. Architecture du Système  
+
+=== Flux de Données  
+1. Réception des messages via MQTT.  
+2. Traitement spécifique en fonction du type de capteur.  
+3. Application de seuils configurables pour le filtrage.  
+4. Stockage des données en fichiers JSON et journaux système.  
+
+=== Fichiers Générés  
+
+==== Données Filtrées  
+* `AM107_filtre_data.json`  
+* `Triphaso_filtre_data.json`  
+* `Solaredge_filtre_data.json`  
+
+==== Logs  
+* `data_log.txt` : Historique des messages MQTT reçus.  
+**Format** : `[TIMESTAMP] Topic: NOM_TOPIC | Data: DONNÉES`  
+**Exemple** : `[2024-02-15 14:30:22] Topic: building/room1/am107 | Data: Température: 22.5°C`  
+
+== IV. Configuration  
+
+=== Fichier `config.ini`  
+Le fichier `config.ini` permet de configurer les seuils et les paramètres MQTT.  
+
+[source,ini]  
+----  
+[mqtt]  
+broker = mqtt.example.com  
+room = salle101  
+solaredge_id = SE123456789  
+topic_triphaso = devices/{room}/triphaso  
+topic_am107 = devices/{room}/am107  
+topic_solaredge = devices/{solaredge_id}/solar  
+
+[seuils]  
+temperature_max = 30.0  
+humidity_max = 70.0  
+co2_max = 1000.0  
+pressure_min = 950.0  
+----  
+
+== V. Formats des Données  
+
+=== AM107  
+[source,json]  
+----  
+{  
+    "temperature": 20.6,  
+    "humidity": 53.0,  
+    "co2": 488.0,  
+    "tvoc": 260.0,  
+    "illumination": 2.0,  
+    "pressure": 1000.6  
+}  
+----  
+
+=== Triphaso  
+[source,json]  
+----  
+{  
+    "voltage": 230.0,  
+    "current": 5.0,  
+    "power": 1150.0,  
+    "frequency": 50.0  
+}  
+----  
+
+=== SolarEdge  
+[source,json]  
+----  
+{  
+    "energy": 5000.0,  
+    "power": 3000.0,  
+    "voltage": 400.0,  
+    "current": 7.5  
+}  
+----  
+
+== VI. Étapes d’Exécution  
+
+=== Installation des Dépendances  
+[source,bash]  
+----  
+pip install -r requirements.txt  
+----  
+
+=== Lancement du Programme  
+[source,bash]  
+----  
+python3 mainIOT.py  
+----  
+
+== VII. Maintenance  
+
+=== Logs Système  
+* **Localisation** : `IOT/Final/datas/data_log.txt`  
+* **Utilisation** :  
+  ** Suivi des messages MQTT  
+  ** Débogage et analyse historique  
+
+=== Gestion des Alertes  
+* Les alertes sont déclenchées lorsque les seuils configurés sont dépassés.  
+* Les détails sont enregistrés dans le fichier de logs avec un horodatage précis.  
+
+== VIII. Conclusion  
+
+Ce script fournit une solution modulaire et extensible pour la gestion des données IoT. Les fichiers de configuration et les seuils peuvent être ajustés en fonction des besoins spécifiques de chaque déploiement.

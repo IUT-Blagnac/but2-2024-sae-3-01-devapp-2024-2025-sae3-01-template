@@ -1,0 +1,137 @@
+= Documentation Utilisateur  
+:toc:  
+:toc-title: Sommaire  
+
+:Version: 1.1  
+:Auteur: [Votre Nom]  
+:Date: [Date de rédaction]  
+
+== Introduction  
+
+Cette documentation utilisateur a pour objectif de vous guider dans l'utilisation du logiciel de gestion des données de capteurs.  
+
+== Fonctionnalités principales  
+
+Le logiciel permet :  
+- De collecter les données des capteurs (AM107, Triphaso, et SolarEdge).  
+- D'appliquer un filtrage basé sur des seuils configurés.  
+- De sauvegarder les données filtrées dans des fichiers JSON exploitables.  
+- De générer des alertes lorsque les seuils sont dépassés.  
+
+== Configuration initiale  
+
+Avant d'utiliser le logiciel, assurez-vous que le fichier `config.ini` est correctement configuré.  
+
+=== Contenu de `config.ini`  
+
+Voici un exemple de configuration :  
+
+[source,ini]  
+----  
+[mqtt]  
+broker = mqtt.example.com  
+room = salle101  
+solaredge_id = SE123456789  
+topic_triphaso = devices/{room}/triphaso  
+topic_am107 = devices/{room}/am107  
+topic_solaredge = devices/{solaredge_id}/solar  
+
+[seuils]  
+temperature_max = 30.0  
+humidity_max = 70.0  
+co2_max = 1000.0  
+tvoc_min = 200.0  
+illumination_min = 10.0  
+pressure_min = 950.0  
+
+[alerts]  
+alert_log_file = IOT/Final/alertes/alert_log.txt  
+----  
+
+**Descriptions des paramètres :**  
+- **broker** : Adresse du serveur MQTT.  
+- **room** : Identifiant de la salle surveillée.  
+- **solaredge_id** : Identifiant du dispositif SolarEdge.  
+- **topic_triphaso** : Topic MQTT pour les données Triphaso.  
+- **topic_am107** : Topic MQTT pour les données AM107.  
+- **topic_solaredge** : Topic MQTT pour les données SolarEdge.  
+- **seuils** : Paramètres déclenchant les alertes.  
+- **alert_log_file** : Chemin du fichier de log des alertes.  
+
+== Lancement du logiciel  
+
+Pour lancer le logiciel :  
+1. Ouvrez un terminal ou une invite de commande.  
+2. Exécutez la commande suivante :  
+
+[source,bash]  
+----  
+python3 mainIOT.py  
+----  
+
+== Lecture des résultats  
+
+Une fois le logiciel exécuté, les données sont sauvegardées dans des fichiers JSON.  
+
+=== Fichiers générés  
+- **AM107_filtre_data.json** : Contient les données des capteurs AM107.  
+- **Triphaso_filtre_data.json** : Contient les données des capteurs Triphaso.  
+- **Solaredge_filtre_data.json** : Contient les données des panneaux solaires SolarEdge.  
+
+=== Exemple de contenu JSON  
+[source,json]  
+----  
+// AM107  
+{  
+    "temperature": 23.5,  
+    "humidity": 50.0,  
+    "co2": 400.0,  
+    "tvoc": 260.0,  
+    "illumination": 2.0,  
+    "pressure": 1012.0  
+}  
+
+// Triphaso  
+{  
+    "voltage": 230.0,  
+    "current": 5.0,  
+    "power": 1150.0,  
+    "frequency": 50.0  
+}  
+
+// SolarEdge  
+{  
+    "energy": 5000.0,  
+    "power": 3000.0,  
+    "voltage": 400.0,  
+    "current": 7.5  
+}  
+----  
+
+== Gestion des alertes  
+
+Lorsque des seuils sont dépassés, des alertes sont enregistrées dans le fichier spécifié (`alert_log.txt`).  
+
+=== Exemple d'alerte  
+[source,text]  
+----  
+Alerte: temperature (35.0) dépasse le seuil (30.0) à 2024-12-04 12:30:45  
+----  
+
+== Problèmes fréquents et solutions  
+
+=== Le logiciel ne démarre pas  
+- **Cause possible** : Python n'est pas installé.  
+- **Solution** : Installez Python 3.9 ou une version plus récente.  
+
+=== Les données ne sont pas enregistrées  
+- **Cause possible** : Mauvaise configuration du broker MQTT.  
+- **Solution** : Vérifiez l'adresse du broker dans `config.ini`.  
+
+=== Les alertes ne s'affichent pas  
+- **Cause possible** : Aucun seuil n'est dépassé.  
+- **Solution** : Vérifiez et ajustez les seuils dans la section `[seuils]` de `config.ini`.  
+
+== Conclusion  
+
+Ce guide explique comment configurer et utiliser le logiciel pour surveiller et analyser les données des capteurs. Pour des informations plus détaillées sur l'installation ou les fonctionnalités avancées, veuillez consulter les autres documentations (technique, code, administrateur).  

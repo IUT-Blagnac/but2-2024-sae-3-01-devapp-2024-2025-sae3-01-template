@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ConfigViewController">
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <VBox spacing="20">
+               <children>
+                  <!-- Température -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="temperature_check" onAction="#handleTemperatureCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="Température" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="temperature_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Humidité -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="humidity_check" onAction="#handleHumidityCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="Humidité" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="humidity_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- CO2 -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="co2_check" onAction="#handleCO2CheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="CO2" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="co2_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- TVOC -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="tvoc_check" onAction="#handleTVOCCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="TVOC" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Min : " />
+                           <TextField fx:id="tvoc_min" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Illumination -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="illumination_check" onAction="#handleIlluminationCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="Illumination" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Min : " />
+                           <TextField fx:id="illumination_min" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Pression -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="pressure_check" onAction="#handlePressureCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="Pression" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Min : " />
+                           <TextField fx:id="pressure_min" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Puissance active positive -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="puissance_active_positive_checkbox" onAction="#handlePuissanceActivePositiveMaxCheckBoxAction" />
+                        <Label style="-fx-font-weight: bold;" text="Puissance active positive" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="puissance_active_positive_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Puissance réactive négative -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="puissance_reactive_negative_checkbox" onAction="#handlePuissanceReactiveNegativeMaxCheckBoxAction"/>
+                        <Label style="-fx-font-weight: bold;" text="Puissance réactive négative" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="puissance_reactive_negative_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Énergie active positive -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="energie_active_positive_checkbox" onAction="#handleEnergieActivePositiveMaxCheckBoxAction"/>
+                        <Label style="-fx-font-weight: bold;" text="Énergie active positive" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="energie_active_positive_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+
+                  <!-- Énergie réactive négative -->
+                  <VBox spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                     <HBox spacing="10">
+                        <CheckBox fx:id="energie_reactive_negative_checkbox" onAction="#handleEnergieReactiveNegativeMaxCheckBoxAction"/>
+                        <Label style="-fx-font-weight: bold;" text="Énergie réactive négative" />
+                     </HBox>
+                     <GridPane hgap="10" vgap="10">
+                        <children>
+                           <Label text="Max : " />
+                           <TextField fx:id="energie_reactive_negative_max" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                     </GridPane>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" spacing="20" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="retour" onAction="#handleBackButtonAction" text="Retour" />
+            <Button fx:id="appliquer" onAction="#handleApplyButtonAction" text="Appliquer" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,141 @@
+= Documentation du Code
+:toc:
+:toc-title: Sommaire
+
+:Version: 1.0
+:Auteur: [Votre Nom]
+:Date: [Date de rédaction]
+
+== Introduction  
+
+Cette documentation technique vise à fournir une vue d’ensemble du code source du logiciel de gestion des données de capteurs. Elle explique l'architecture, les fonctions principales, et le rôle des modules utilisés.
+
+== Architecture globale  
+
+Le programme est conçu autour d’un modèle basé sur le traitement des données MQTT. Voici une vue d’ensemble des principaux composants :  
+
+- **Connexion MQTT** : Se connecte au serveur MQTT pour recevoir les données des capteurs.  
+- **Traitement des données** : Identifie le type de capteur et applique un traitement spécifique.  
+- **Filtrage et sauvegarde** : Filtre les données en fonction de seuils configurables et les sauvegarde dans des fichiers JSON.  
+
+=== Diagramme de fonctionnement  
+[diagramme ou explication simplifiée]  
+
+== Fichiers et modules  
+
+- `mainIOT.py` : Fichier principal contenant le code du programme.  
+- `config.ini` : Fichier de configuration contenant les paramètres MQTT et les seuils.  
+
+== Dépendances  
+
+Voici les bibliothèques utilisées :  
+- `paho.mqtt.client` : Gère la connexion et la communication MQTT.  
+- `json` : Lecture et écriture de données JSON.  
+- `configparser` : Gestion des fichiers de configuration.  
+- `datetime` : Gestion des dates et heures pour les logs.  
+
+Pour installer les dépendances, exécutez :  
+[source,bash]
+----
+pip install paho-mqtt
+----
+
+== Description des fonctions principales  
+
+=== on_connect(client, userdata, flags, rc)  
+[source,python]
+----
+def on_connect(client, userdata, flags, rc):
+    """
+    Gère la connexion au serveur MQTT.
+    
+    Args:
+        client (object): Instance du client MQTT.
+        userdata (object): Données utilisateur associées.
+        flags (dict): Drapeaux MQTT.
+        rc (int): Code de résultat de la connexion.
+    """
+    client.subscribe(topic_triphaso)
+    client.subscribe(topic_am107)
+    client.subscribe(topic_solaredge)
+    print("Abonné aux topics pour les capteurs.")
+----
+**Rôle** :  
+- Établit la connexion avec le serveur MQTT.  
+- S’abonne aux topics spécifiés dans `config.ini`.  
+
+=== on_message(client, userdata, msg)  
+[source,python]
+----
+def on_message(client, userdata, msg):
+    """
+    Traite les messages reçus via MQTT.
+    
+    Args:
+        client (object): Instance du client MQTT.
+        userdata (object): Données utilisateur associées.
+        msg (object): Message reçu, contient le topic et le payload.
+    """
+    payload = json.loads(msg.payload.decode())
+    # Traitement basé sur le type de capteur
+----
+**Rôle** :  
+- Identifie le capteur correspondant.  
+- Redirige les données vers les fonctions de traitement appropriées (`process_am107_data`, `process_triphaso_data`, etc.).  
+
+=== process_am107_data(payload)  
+[source,python]
+----
+def process_am107_data(payload):
+    """
+    Traite les données des capteurs AM107.
+
+    Args:
+        payload (list): Contient les données des capteurs et les informations de l'appareil.
+
+    Returns:
+        str: Données formatées pour la sortie.
+    """
+----
+**Rôle** :  
+- Analyse les données des capteurs AM107.  
+- Vérifie les seuils et ajoute des alertes si nécessaire.  
+
+=== donnee_filtree(data_list, config_file, output_file)  
+[source,python]
+----
+def donnee_filtree(data_list, config_file='config.ini', output_file='AM07_filtre_data.json'):
+    """
+    Filtre les données en fonction des seuils définis dans la configuration.
+
+    Args:
+        data_list (list): Liste des données à traiter.
+        config_file (str): Chemin vers le fichier de configuration.
+        output_file (str): Chemin vers le fichier JSON de sortie.
+    """
+----
+**Rôle** :  
+- Applique les seuils définis dans `config.ini` aux données reçues.  
+- Sauvegarde les résultats filtrés dans un fichier JSON.  
+
+== Exemple de flux de données  
+
+1. **Connexion MQTT** : Le script se connecte au broker MQTT et s’abonne aux topics définis.  
+2. **Réception des données** : Les messages MQTT sont reçus et traités par `on_message`.  
+3. **Filtrage et sauvegarde** : Les données sont filtrées et enregistrées sous forme de fichiers JSON.  
+
+== Pratiques de documentation intégrées  
+
+Le code contient des docstrings pour les fonctions clés. Ces docstrings suivent les conventions Python et peuvent être utilisées avec des outils comme Sphinx pour générer une documentation HTML.  
+
+== Instructions pour tester le code  
+
+1. **Configurer MQTT** : Vérifiez que `config.ini` contient les bonnes informations pour le broker et les topics.  
+2. **Exécuter le script** :  
+   ```bash
+   python3 mainIOT.py
+3. **Vérifier les fichiers de sortie** : Consultez les fichiers JSON et les logs pour vous assurer du bon fonctionnement.
+
+== Conclusion
+
+Cette documentation fournit une vue d’ensemble du code, de son fonctionnement et de ses principales fonctions. Elle peut être utilisée comme point de départ pour les développeurs souhaitant contribuer ou maintenir le projet.

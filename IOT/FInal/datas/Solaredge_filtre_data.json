@@ -1,0 +1,330 @@
+
+{
+    "solar": {
+        "0": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 7653.0
+            },
+            "lastMonthData": {
+                "energy": 48738.0
+            },
+            "lastYearData": {
+                "energy": 2983144.0
+            },
+            "lifeTimeData": {
+                "energy": 3464174.0
+            },
+            "lastUpdateTime": "2024-12-06 20:37:00"
+        },
+        "1": {
+            "currentPower": {
+                "power": 451.37173
+            },
+            "lastDayData": {
+                "energy": 566.0
+            },
+            "lastMonthData": {
+                "energy": 49304.0
+            },
+            "lastYearData": {
+                "energy": 2983710.0
+            },
+            "lifeTimeData": {
+                "energy": 3464740.0
+            },
+            "lastUpdateTime": "2024-12-07 11:28:43"
+        },
+        "2": {
+            "currentPower": {
+                "power": 361.09244
+            },
+            "lastDayData": {
+                "energy": 729.0
+            },
+            "lastMonthData": {
+                "energy": 49467.0
+            },
+            "lastYearData": {
+                "energy": 2983873.0
+            },
+            "lifeTimeData": {
+                "energy": 3464903.0
+            },
+            "lastUpdateTime": "2024-12-07 11:52:32"
+        },
+        "3": {
+            "currentPower": {
+                "power": 361.09244
+            },
+            "lastDayData": {
+                "energy": 729.0
+            },
+            "lastMonthData": {
+                "energy": 49467.0
+            },
+            "lastYearData": {
+                "energy": 2983873.0
+            },
+            "lifeTimeData": {
+                "energy": 3464903.0
+            },
+            "lastUpdateTime": "2024-12-07 11:52:32"
+        },
+        "4": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 17:59:34"
+        },
+        "5": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 17:59:34"
+        },
+        "6": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 17:59:34"
+        },
+        "7": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "8": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "9": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "10": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "11": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "12": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "13": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:14:34"
+        },
+        "14": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:30:35"
+        },
+        "15": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:30:35"
+        },
+        "16": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:30:35"
+        },
+        "17": {
+            "currentPower": {
+                "power": 0.0
+            },
+            "lastDayData": {
+                "energy": 2339.0
+            },
+            "lastMonthData": {
+                "energy": 56064.0
+            },
+            "lastYearData": {
+                "energy": 2990470.0
+            },
+            "lifeTimeData": {
+                "energy": 3471500.0
+            },
+            "lastUpdateTime": "2024-12-08 18:30:35"
+        }
+    }
+}
+

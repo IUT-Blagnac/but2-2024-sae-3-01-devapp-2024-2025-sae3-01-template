@@ -1,0 +1,115 @@
+= Documentation Administrateur
+:toc:
+:toc-title: Sommaire
+
+:Version: 1.0
+:Auteur: [Votre Nom]
+:Date: [Date de rédaction]
+
+== Introduction  
+
+Cette documentation est destinée aux administrateurs responsables de l'installation, de la configuration, et de la maintenance du logiciel de gestion des données de capteurs. Elle détaille les prérequis, les étapes d'installation, et les actions nécessaires pour garantir le bon fonctionnement du logiciel.
+
+== Prérequis  
+
+Avant d'installer le logiciel, assurez-vous que votre système respecte les prérequis suivants :  
+
+=== Configuration système  
+- **OS** : Linux ou Windows.  
+- **Python** : Version 3.9 ou plus récente.  
+
+=== Logiciels nécessaires  
+- **Bibliothèques Python** : Installez-les à l’aide de la commande suivante :  
+[source,bash]
+----
+pip install -r requirements.txt
+----  
+
+=== Accès réseau  
+- Accès au broker MQTT (adresse spécifiée dans `config.ini`).  
+
+== Installation  
+
+Suivez ces étapes pour installer le logiciel :  
+
+1. **Téléchargement du code**  
+   Clonez ou téléchargez le projet depuis le dépôt Git ou une autre source partagée.  
+
+2. **Installation des dépendances**  
+   Installez les bibliothèques nécessaires en exécutant :  
+   [source,bash]
+   ----
+   pip install -r requirements.txt
+   ----  
+
+3. **Configuration initiale**  
+   Modifiez le fichier `config.ini` pour l’adapter à votre environnement :  
+   [source,ini]
+   ----
+   [mqtt]
+   broker = mqtt.example.com
+   room = salle101
+   solaredge_id = SE123456789
+
+   [seuils]
+   temperature_max = 30.0
+   humidity_max = 70.0
+   ----  
+
+4. **Test de la configuration**  
+   Exécutez le script et vérifiez qu'il se connecte au broker MQTT et commence à traiter les données :  
+   [source,bash]
+   ----
+   python3 mainIOT.py
+   ----  
+   Les messages suivants indiquent une connexion réussie : 
+    Connecté avec le code de résultat 0 Abonné aux topics pour les capteurs.
+
+
+== Vérification du bon fonctionnement  
+
+=== Fichiers de sortie  
+Vérifiez que les fichiers suivants sont créés et mis à jour après l'exécution :  
+- **AM07_filtre_data.json** : Données des capteurs AM107.  
+- **Triphaso_filtre_data.json** : Données des capteurs Triphaso.  
+- **Solaredge_filtre_data.json** : Données des panneaux solaires SolarEdge.  
+
+=== Logs d’exécution  
+Les logs d’exécution sont enregistrés dans `data_log.txt`. Recherchez des erreurs ou des anomalies pour diagnostiquer les problèmes.  
+
+== Résolution des problèmes  
+
+=== Le script ne démarre pas  
+- **Cause possible** : Python n’est pas installé ou la version est obsolète.  
+- **Solution** : Installez Python 3.9 ou une version plus récente.  
+
+=== Aucune donnée reçue  
+- **Cause possible** : Le broker MQTT est inaccessible.  
+- **Solution** :  
+- Vérifiez l’adresse du broker dans `config.ini`.  
+- Testez la connectivité réseau avec la commande :  
+ [source,bash]
+ ----
+ ping mqtt.example.com
+ ----  
+
+=== Alertes manquantes  
+- **Cause possible** : Les seuils sont mal configurés.  
+- **Solution** : Revoyez les seuils dans `config.ini` et assurez-vous qu’ils sont réalistes.  
+
+== Maintenance  
+
+=== Mise à jour du logiciel  
+Pour mettre à jour le logiciel :  
+1. Sauvegardez les fichiers JSON et les logs actuels.  
+2. Téléchargez ou pull les dernières modifications depuis le dépôt Git.  
+3. Répétez les étapes d'installation des dépendances si nécessaire.  
+
+=== Surveillance continue  
+- Automatisez l’exécution du script en configurant un service système (exemple pour Linux avec `systemd`).  
+- Vérifiez régulièrement les logs pour identifier des problèmes potentiels.  
+
+== Conclusion  
+
+Cette documentation couvre toutes les étapes nécessaires pour installer, configurer, et maintenir le logiciel. Si vous rencontrez des problèmes non documentés ici, contactez l'équipe de développement pour plus d'assistance.  
+

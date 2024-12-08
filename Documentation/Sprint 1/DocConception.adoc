@@ -1,0 +1,37 @@
+= Document de Conception
+:compat-mode!:
+:toc:
+:toc-title: Table des matières
+:toclevels: 4
+
+
+*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
+*Pour :* _Brickolo_ +
+*Date :* 20/11/2024 +
+*Équipe : 2A7* 
+
+---
+
+
+image::./img/logo_iut_blagnac.png[Logo IUT de Blagnac, 200]
+image::./img/logo_univ_jean_jaures.jpg[Logo Université Toulouse II - Jean Jaurès, 200]
+
+---
+
+== *Introduction*
+
+== *1. Architecture système*
+
+=== 1.1 Architecture logicielle
+
+=== 1.2 Logique métier (Diagramme des Classes Métier (DCM))
+
+== 2. Description des fonctionnalités
+=== 2.1 Diagramme des Cas d’Utilisation (DCU)
+=== Use case : internaute et client
+image::./../images/Use_Case_utilisateur.PNG[DCU utilisateur]
+
+=== 2.2 Diagrammes de Séquence Système (DSS)
+==== 2.2.1 Client non connecté
+==== 2.2.2 Client connecté
+==== 2.2.3 Administrateur

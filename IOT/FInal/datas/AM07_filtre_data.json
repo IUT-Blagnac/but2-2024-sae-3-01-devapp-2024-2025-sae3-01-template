@@ -1,0 +1,103 @@
+[
+    {
+        "timestamp": "2024-12-08 15:21:52",
+        "room": "B202",
+        "data": {
+            "temperature": 18.4,
+            "humidity": 43,
+            "co2": 426,
+            "illumination": 1
+        }
+    },
+    {
+        "timestamp": "2024-12-08 15:21:54",
+        "room": "Local-velo",
+        "data": {
+            "temperature": 7.8,
+            "humidity": 85.5,
+            "co2": 440,
+            "illumination": 154
+        }
+    },
+    {
+        "timestamp": "2024-12-08 15:21:56",
+        "room": "C004",
+        "data": {
+            "temperature": 17.1,
+            "humidity": 49,
+            "co2": 413,
+            "illumination": 7
+        }
+    },
+    {
+        "timestamp": "2024-12-08 15:26:20",
+        "room": "B217",
+        "data": {
+            "temperature": 17.9,
+            "humidity": 42,
+            "co2": 415,
+            "illumination": 2
+        }
+    },
+    {
+        "timestamp": "2024-12-08 15:26:21",
+        "room": "B112",
+        "data": {
+            "temperature": 17.7,
+            "humidity": 44,
+            "co2": 432,
+            "illumination": 1
+        }
+    },
+    {
+        "timestamp": "2024-12-08 15:30:23",
+        "room": "B110",
+        "data": {
+            "temperature": 16.8,
+            "humidity": 44,
+            "co2": 409,
+            "illumination": 2
+        }
+    },
+    
+    {
+        "timestamp": "2024-12-08 17:30:19",
+        "room": "E102",
+        "data": {
+            "temperature": 16.7,
+            "humidity": 47,
+            "co2": 429,
+            "illumination": 1
+        }
+    },
+    {
+        "timestamp": "2024-12-08 17:30:22",
+        "room": "E103",
+        "data": {
+            "temperature": 15.3,
+            "humidity": 51,
+            "co2": 454,
+            "illumination": 2
+        }
+    },
+    {
+        "timestamp": "2024-12-08 17:30:24",
+        "room": "B110",
+        "data": {
+            "temperature": 16.7,
+            "humidity": 45.5,
+            "co2": 413,
+            "illumination": 0
+        }
+    },
+    {
+        "timestamp": "2024-12-08 17:30:24",
+        "room": "hall-entrée-principale",
+        "data": {
+            "temperature": 18.6,
+            "humidity": 45,
+            "co2": 434,
+            "illumination": 5
+        }
+    }
+]

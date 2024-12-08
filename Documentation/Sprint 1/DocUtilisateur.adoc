@@ -1,0 +1,16 @@
+
+= Documentation Utilisateur
+:toc-title: Sommaire
+:toc: macro
+
+*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
+*Pour :* _Brickolo_ +
+*Date :* 20/11/2024 +
+*Équipe : 2A7* 
+
+---
+toc::[]
+---
+
+== I. Contexte
+
