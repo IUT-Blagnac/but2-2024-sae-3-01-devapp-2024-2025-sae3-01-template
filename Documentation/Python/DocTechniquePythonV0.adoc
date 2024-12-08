@@ -1,0 +1,124 @@
+= Document technique pour la partie IoT : PYTHON
+:toc:
+:toc-title: Sommaire
+
+:Entreprise: **Votre Entreprise**
+:Equipe: **Nom de l'équipe**
+
+*Auteur : [Votre nom], publié le [date]*  
+Créé pour : Décrire le fonctionnement et les fonctionnalités du script Python de gestion des données de capteurs.
+
+== I. Présentation du code  
+
+Le script Python gère les données provenant de capteurs connectés via un serveur MQTT. Il est conçu pour :  
+- Extraire les données brutes des capteurs (AM107, Triphaso, et SolarEdge).  
+- Filtrer ces données selon des seuils configurables.  
+- Enregistrer les résultats dans des fichiers JSON adaptés pour une exploitation ultérieure.  
+
+Le programme utilise des bibliothèques comme `paho.mqtt.client` pour interagir avec le protocole MQTT et gère plusieurs types de capteurs simultanément grâce à un traitement spécifique pour chaque type.
+
+== II. Description des ressources  
+
+=== Langages utilisés :  
+- Python  
+
+=== Configuration requise :  
+- OS : Linux, Windows  
+- IDE recommandé : Visual Studio Code  
+- Bibliothèques nécessaires :  
+  - `paho.mqtt.client`  
+  - `json`  
+  - `configparser`  
+  - `datetime`  
+
+== III. Fonctionnalités principales  
+
+1. *Connexion au serveur MQTT*  
+   - Le script se connecte à un serveur MQTT défini dans le fichier `config.ini`.  
+   - Il s’abonne à trois topics spécifiques aux capteurs AM107, Triphaso, et SolarEdge.  
+
+2. *Traitement des données*  
+   - Les messages MQTT reçus sont triés et analysés selon leur type de capteur.  
+
+3. *Filtrage et écriture des données*  
+   - Les données sont comparées à des seuils définis dans `config.ini`.  
+   - Les résultats filtrés sont enregistrés dans des fichiers JSON (`AM07_filtre_data.json`, `Triphaso_filtre_data.json`, et `Solaredge_filtre_data.json`).  
+
+4. *Détection d’alertes*  
+   - Lorsqu’une valeur dépasse un seuil, une alerte est enregistrée dans un fichier log.  
+
+== IV. Structure du code  
+
+1. *Connexion MQTT*  
+   - `on_connect`: Gère la connexion et l’abonnement aux topics.  
+   - `on_message`: Reçoit les messages MQTT et redirige les données vers des fonctions spécifiques.  
+
+2. *Traitement des données*  
+   - `process_am107_data`: Analyse les données des capteurs AM107.  
+   - `process_triphaso_data`: Gère les données énergétiques des capteurs Triphaso.  
+   - `process_solaredge_data`: Traite les données des panneaux solaires SolarEdge.  
+
+3. *Filtrage des données*  
+   - `donnee_filtree`: Applique les seuils configurés et enregistre les résultats filtrés.  
+
+4. *Enregistrement*  
+   - `log_data`: Sauvegarde les données traitées dans des fichiers texte pour suivi.  
+
+== V. Exemple de fichiers JSON générés  
+
+=== Données SolarEdge  
+[source,json]
+----
+{
+    "energie_totale": 3434514.0,
+    "energie_annee_derniere": 2953484.0,
+    "energie_mois_dernier": 19078.0,
+    "energie_jour_dernier": 299.0
+}
+----
+
+=== Données Triphaso  
+[source,json]
+----
+{
+    "puissance_active_positive": 89.0,
+    "puissance_reactive_negative": 165.0,
+    "energie_active_positive": 975236.0,
+    "energie_reactive_negative": 1478210.0
+}
+----
+
+== VI. Configuration  
+
+=== Exemple de configuration (`config.ini`) :  
+[source,ini]
+----
+[mqtt]
+broker = mqtt.example.com
+room = salle101
+solaredge_id = SE123456789
+topic_triphaso = devices/{room}/triphaso
+topic_am107 = devices/{room}/am107
+topic_solaredge = devices/{solaredge_id}/solar
+
+[seuils]
+temperature_max = 30.0
+humidity_max = 70.0
+co2_max = 1000.0
+pressure_min = 950.0
+----
+
+== VII. Étapes d’exécution  
+
+1. Configurez le fichier `config.ini` avec les paramètres spécifiques à vos capteurs.  
+2. Lancez le script Python :  
+[source,bash]
+----
+python3 mainIOT.py
+----
+3. Les données filtrées seront enregistrées dans les fichiers JSON mentionnés.  
+4. Consultez les fichiers de log pour les alertes.  
+
+== VIII. Conclusion  
+
+Ce script propose une solution robuste pour la gestion de données IoT. Sa modularité permet d’ajouter facilement de nouveaux capteurs ou de modifier les seuils d’alerte. Il garantit une traçabilité complète grâce à des fichiers de log et de sortie structurés.  

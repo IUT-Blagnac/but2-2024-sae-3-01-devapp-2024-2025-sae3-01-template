@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="600.0" prefWidth="837.0" stylesheets="@../../../../../../../../../../sae3-01-devapp-g1a-1-master/Applications/Java/src/application/ressource/configStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.AffDonneesViewController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="tabBord" text="Tableau de bord">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.9255617977528089" orientation="VERTICAL" prefHeight="571.0" prefWidth="837.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane prefHeight="525.0" prefWidth="837.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <GridPane style="-fx-border-width: 1; -fx-border-color: gray;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="115.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="302.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label fx:id="labTemp" text="Température : ">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="150.0" left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <LineChart fx:id="lineChart_temp" prefHeight="261.0" prefWidth="293.0" GridPane.columnIndex="1">
+                                                  <xAxis>
+                                                    <CategoryAxis fx:id="TB_xTemp" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis fx:id="TB_yTemp" side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-width: 1; -fx-border-color: gray;" GridPane.columnIndex="1">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="118.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label fx:id="labHum" text="Humidité :">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="150.0" left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <BarChart fx:id="barChart_Hum" GridPane.columnIndex="1">
+                                                  <xAxis>
+                                                    <CategoryAxis fx:id="TB_xHum" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis fx:id="TB_yHum" side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane style="-fx-border-width: 1; -fx-border-color: gray;" GridPane.rowIndex="1">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="118.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label fx:id="labLum" text="Luminosité :">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="150.0" left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <LineChart fx:id="lineChart_Lum" GridPane.columnIndex="1">
+                                                  <xAxis>
+                                                    <CategoryAxis fx:id="TB_xLum" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis fx:id="TB_yLum" side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane prefHeight="218.0" prefWidth="370.0" style="-fx-border-width: 1; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="118.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label fx:id="labActivite" text="Activité :">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="150.0" left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <ScatterChart fx:id="scatterChart_Activite" GridPane.columnIndex="1">
+                                                  <xAxis>
+                                                    <CategoryAxis fx:id="TB_xActivite" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis fx:id="TB_yActivite" side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <MenuButton fx:id="salles" layoutY="2.0" mnemonicParsing="false" onAction="#afficheSalle" text="Salle">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </MenuButton>
+                                    <Button fx:id="retour1" layoutX="694.0" layoutY="6.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="compDonnees" text="Comparaison données">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="18.0" layoutY="19.0" prefHeight="450.0" prefWidth="771.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.40003662109376" minWidth="10.0" prefWidth="182.79998474121095" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.20001525878905" minWidth="10.0" prefWidth="507.20001525878905" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="430.0" prefWidth="254.0" text="Affichage">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="listeSalles" layoutX="16.0" layoutY="25.0" prefHeight="200.0" prefWidth="232.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <PieChart GridPane.columnIndex="1" />
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <tabs>
+                                  <Tab fx:id="CD_temperature" text="Température">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BarChart fx:id="barchartTemp" layoutX="4.0" layoutY="11.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="CD_activite" text="Activité">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BarChart fx:id="barchartActivite" layoutX="4.0" layoutY="11.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab fx:id="CD_luminosite" text="Luminosité">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BarChart fx:id="barchartLum" layoutX="4.0" layoutY="11.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="CD_humidite" text="Humidité">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BarChart fx:id="barchartHum" layoutX="4.0" layoutY="11.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="retour2" layoutX="698.0" layoutY="520.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="logs" text="Logs">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.9255617977528089" orientation="VERTICAL" prefHeight="571.0" prefWidth="837.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane prefHeight="525.0" prefWidth="837.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <ListView fx:id="tousLesDonnees" prefHeight="200.0" prefWidth="200.0" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Button fx:id="retour3" layoutX="694.0" layoutY="7.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,477 @@
+Alerte: temperature (23.3) dépasse le seuil (10.0) à 2024-12-05 14:00:58.629179
+Alerte: tvoc (69.0) est inférieur au seuil (2000.0) à 2024-12-05 14:00:58.629179
+Alerte: puissance_reactive_negative (348.0) dépasse le seuil (150.0) à 2024-12-05 14:00:58.732489
+Alerte: energie_reactive_negative (4078484.0) dépasse le seuil (900000.0) à 2024-12-05 14:00:58.732489
+Alerte: temperature (21.1) dépasse le seuil (10.0) à 2024-12-05 14:01:00.771027
+Alerte: tvoc (181.0) est inférieur au seuil (2000.0) à 2024-12-05 14:01:00.771027
+Alerte: puissance_active_positive (257.0) dépasse le seuil (200.0) à 2024-12-05 14:01:01.153732
+Alerte: energie_active_positive (2229622.0) dépasse le seuil (400000.0) à 2024-12-05 14:01:01.153732
+Alerte: energie_reactive_negative (1848000.0) dépasse le seuil (900000.0) à 2024-12-05 14:01:01.153732
+Alerte: puissance_active_positive (403.0) dépasse le seuil (200.0) à 2024-12-05 14:01:02.271577
+Alerte: energie_active_positive (5755961.0) dépasse le seuil (400000.0) à 2024-12-05 14:01:02.271577
+Alerte: energie_reactive_negative (2131861.0) dépasse le seuil (900000.0) à 2024-12-05 14:01:02.271577
+Alerte: temperature (19.9) dépasse le seuil (10.0) à 2024-12-05 14:01:02.381273
+Alerte: tvoc (67.0) est inférieur au seuil (2000.0) à 2024-12-05 14:01:02.381273
+Alerte: temperature (15.1) dépasse le seuil (12.0) à 2024-12-08 18:10:10.390079
+Alerte: tvoc (95.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:10.391129
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:10.391129
+Alerte: temperature (16.6) dépasse le seuil (12.0) à 2024-12-08 18:10:12.031474
+Alerte: tvoc (69.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:12.031474
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:12.031474
+Alerte: temperature (16.5) dépasse le seuil (12.0) à 2024-12-08 18:10:12.333469
+Alerte: tvoc (94.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:12.333469
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:12.333469
+Alerte: temperature (18.4) dépasse le seuil (12.0) à 2024-12-08 18:10:13.564958
+Alerte: tvoc (279.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:13.564958
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:13.565961
+Alerte: puissance_active_positive (426.0) dépasse le seuil (200.0) à 2024-12-08 18:10:36.604673
+Alerte: puissance_reactive_negative (610.0) dépasse le seuil (150.0) à 2024-12-08 18:10:36.604673
+Alerte: energie_active_positive (7248547.0) dépasse le seuil (333333.0) à 2024-12-08 18:10:36.604673
+Alerte: energie_reactive_negative (6811259.0) dépasse le seuil (900000.0) à 2024-12-08 18:10:36.604673
+Alerte: puissance_reactive_negative (183.0) dépasse le seuil (150.0) à 2024-12-08 18:10:37.830686
+Alerte: energie_active_positive (2569702.0) dépasse le seuil (333333.0) à 2024-12-08 18:10:37.830686
+Alerte: energie_reactive_negative (2261784.0) dépasse le seuil (900000.0) à 2024-12-08 18:10:37.830686
+Alerte: temperature (18.9) dépasse le seuil (12.0) à 2024-12-08 18:10:42.748817
+Alerte: tvoc (20.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:42.748817
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:42.748817
+Alerte: temperature (19.1) dépasse le seuil (12.0) à 2024-12-08 18:10:57.619864
+Alerte: tvoc (70.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:57.619864
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:57.619864
+Alerte: temperature (16.5) dépasse le seuil (12.0) à 2024-12-08 18:10:58.414712
+Alerte: tvoc (107.0) est inférieur au seuil (2000.0) à 2024-12-08 18:10:58.414712
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:10:58.414712
+Alerte: temperature (18.9) dépasse le seuil (12.0) à 2024-12-08 18:11:00.546943
+Alerte: tvoc (28.0) est inférieur au seuil (2000.0) à 2024-12-08 18:11:00.546943
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:11:00.546943
+Alerte: energie_reactive_negative (1228053.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:01.897522
+Alerte: puissance_reactive_negative (201.0) dépasse le seuil (150.0) à 2024-12-08 18:11:02.439523
+Alerte: energie_active_positive (2670617.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:02.439523
+Alerte: energie_reactive_negative (2032017.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:02.439523
+Alerte: puissance_reactive_negative (227.0) dépasse le seuil (150.0) à 2024-12-08 18:11:06.781570
+Alerte: energie_active_positive (2008230.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:06.781570
+Alerte: energie_reactive_negative (2517462.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:06.781570
+Alerte: energie_reactive_negative (1228053.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:08.860868
+Alerte: puissance_reactive_negative (348.0) dépasse le seuil (150.0) à 2024-12-08 18:11:10.907704
+Alerte: energie_reactive_negative (4105134.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:10.907704
+Alerte: puissance_active_positive (373.0) dépasse le seuil (200.0) à 2024-12-08 18:11:14.695624
+Alerte: energie_active_positive (2670618.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:14.696627
+Alerte: energie_reactive_negative (2032018.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:14.696627
+Alerte: puissance_active_positive (656.0) dépasse le seuil (200.0) à 2024-12-08 18:11:15.701353
+Alerte: puissance_reactive_negative (558.0) dépasse le seuil (150.0) à 2024-12-08 18:11:15.701353
+Alerte: energie_active_positive (7248552.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:15.701353
+Alerte: energie_reactive_negative (6811267.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:15.701353
+Alerte: energie_active_positive (2670618.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:17.971525
+Alerte: energie_reactive_negative (2032018.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:17.972578
+Alerte: puissance_active_positive (482.0) dépasse le seuil (200.0) à 2024-12-08 18:11:19.038228
+Alerte: puissance_reactive_negative (547.0) dépasse le seuil (150.0) à 2024-12-08 18:11:19.038228
+Alerte: energie_active_positive (7248552.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:19.038228
+Alerte: energie_reactive_negative (6811267.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:19.038228
+Alerte: puissance_reactive_negative (345.0) dépasse le seuil (150.0) à 2024-12-08 18:11:20.417335
+Alerte: energie_reactive_negative (4105120.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:20.417335
+Alerte: temperature (17.3) dépasse le seuil (12.0) à 2024-12-08 18:11:40.194378
+Alerte: tvoc (78.0) est inférieur au seuil (2000.0) à 2024-12-08 18:11:40.194378
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:11:40.194378
+Alerte: temperature (18.3) dépasse le seuil (12.0) à 2024-12-08 18:11:40.807772
+Alerte: tvoc (22.0) est inférieur au seuil (2000.0) à 2024-12-08 18:11:40.807772
+Alerte: illumination (2.0) est inférieur au seuil (10.0) à 2024-12-08 18:11:40.807772
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:11:41.424456
+Alerte: energie_active_positive (748495.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:41.424456
+Alerte: energie_reactive_negative (2790921.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:41.424456
+Alerte: energie_reactive_negative (1113176.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:42.652647
+Alerte: humidity (89.0) dépasse le seuil (60.0) à 2024-12-08 18:11:43.499409
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:11:43.499409
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:11:43.776482
+Alerte: energie_active_positive (886477.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:43.776482
+Alerte: energie_reactive_negative (3487536.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:43.777487
+Alerte: temperature (16.9) dépasse le seuil (12.0) à 2024-12-08 18:11:44.392414
+Alerte: tvoc (33.0) est inférieur au seuil (2000.0) à 2024-12-08 18:11:44.392414
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:11:44.392414
+Alerte: energie_active_positive (609234.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:44.875470
+Alerte: energie_reactive_negative (1495330.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:44.875470
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:11:47.229481
+Alerte: energie_active_positive (748495.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:47.229481
+Alerte: energie_reactive_negative (2790921.0) dépasse le seuil (900000.0) à 2024-12-08 18:11:47.229481
+Alerte: energie_active_positive (335509.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:48.282907
+Alerte: energie_active_positive (335509.0) dépasse le seuil (333333.0) à 2024-12-08 18:11:54.632514
+Alerte: temperature (12.2) dépasse le seuil (12.0) à 2024-12-08 18:12:00.776318
+Alerte: humidity (61.0) dépasse le seuil (60.0) à 2024-12-08 18:12:00.776318
+Alerte: tvoc (171.0) est inférieur au seuil (2000.0) à 2024-12-08 18:12:00.776318
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:12:00.776318
+Alerte: temperature (21.6) dépasse le seuil (12.0) à 2024-12-08 18:12:09.991723
+Alerte: tvoc (73.0) est inférieur au seuil (2000.0) à 2024-12-08 18:12:09.991723
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:12:09.991723
+Alerte: temperature (17.4) dépasse le seuil (12.0) à 2024-12-08 18:12:10.923187
+Alerte: tvoc (52.0) est inférieur au seuil (2000.0) à 2024-12-08 18:12:10.923187
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:12:10.923187
+Alerte: temperature (18.9) dépasse le seuil (12.0) à 2024-12-08 18:12:30.340000
+Alerte: co2 (1644.0) dépasse le seuil (1000.0) à 2024-12-08 18:12:30.340000
+Alerte: tvoc (10.0) est inférieur au seuil (2000.0) à 2024-12-08 18:12:30.340000
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:12:30.340000
+Alerte: puissance_reactive_negative (181.0) dépasse le seuil (150.0) à 2024-12-08 18:12:36.512183
+Alerte: energie_active_positive (2569708.0) dépasse le seuil (333333.0) à 2024-12-08 18:12:36.512183
+Alerte: energie_reactive_negative (2261790.0) dépasse le seuil (900000.0) à 2024-12-08 18:12:36.512183
+Alerte: temperature (20.7) dépasse le seuil (12.0) à 2024-12-08 18:12:39.483863
+Alerte: tvoc (56.0) est inférieur au seuil (2000.0) à 2024-12-08 18:12:39.483863
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:12:39.483863
+Alerte: temperature (19.1) dépasse le seuil (12.0) à 2024-12-08 18:13:01.994062
+Alerte: tvoc (71.0) est inférieur au seuil (2000.0) à 2024-12-08 18:13:01.994062
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:13:01.994062
+Alerte: energie_reactive_negative (1228056.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:02.003090
+Alerte: temperature (47.5) dépasse le seuil (12.0) à 2024-12-08 18:13:02.527076
+Alerte: tvoc (72.0) est inférieur au seuil (2000.0) à 2024-12-08 18:13:02.527076
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:13:02.527076
+Alerte: temperature (19.1) dépasse le seuil (12.0) à 2024-12-08 18:13:04.161915
+Alerte: tvoc (71.0) est inférieur au seuil (2000.0) à 2024-12-08 18:13:04.161915
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:13:04.161915
+Alerte: puissance_reactive_negative (226.0) dépasse le seuil (150.0) à 2024-12-08 18:13:06.826386
+Alerte: energie_active_positive (2008234.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:06.826386
+Alerte: energie_reactive_negative (2517470.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:06.826386
+Alerte: temperature (21.9) dépasse le seuil (12.0) à 2024-12-08 18:13:08.228495
+Alerte: tvoc (9.0) est inférieur au seuil (2000.0) à 2024-12-08 18:13:08.228495
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:13:08.228495
+Alerte: temperature (17.9) dépasse le seuil (12.0) à 2024-12-08 18:13:08.461046
+Alerte: tvoc (62.0) est inférieur au seuil (2000.0) à 2024-12-08 18:13:08.461046
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:13:08.461046
+Alerte: energie_reactive_negative (1228056.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:08.768221
+Alerte: puissance_reactive_negative (341.0) dépasse le seuil (150.0) à 2024-12-08 18:13:10.919815
+Alerte: energie_reactive_negative (4105146.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:10.919815
+Alerte: puissance_active_positive (472.0) dépasse le seuil (200.0) à 2024-12-08 18:13:16.654726
+Alerte: puissance_reactive_negative (544.0) dépasse le seuil (150.0) à 2024-12-08 18:13:16.654726
+Alerte: energie_active_positive (7248567.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:16.654726
+Alerte: energie_reactive_negative (6811284.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:16.654726
+Alerte: energie_active_positive (2670624.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:17.881668
+Alerte: energie_reactive_negative (2032022.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:17.881668
+Alerte: puissance_reactive_negative (344.0) dépasse le seuil (150.0) à 2024-12-08 18:13:20.650079
+Alerte: energie_reactive_negative (4105132.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:20.650079
+Alerte: energie_active_positive (335509.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:41.434416
+Alerte: energie_reactive_negative (1113179.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:42.734171
+Alerte: energie_active_positive (609236.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:43.998833
+Alerte: energie_reactive_negative (1495335.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:43.998833
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:13:44.916407
+Alerte: energie_active_positive (886479.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:44.916407
+Alerte: energie_reactive_negative (3487544.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:44.916407
+Alerte: energie_active_positive (335509.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:48.603639
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:13:49.933108
+Alerte: energie_active_positive (748496.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:49.933108
+Alerte: energie_reactive_negative (2790930.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:49.933108
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:13:55.361968
+Alerte: energie_active_positive (748496.0) dépasse le seuil (333333.0) à 2024-12-08 18:13:55.361968
+Alerte: energie_reactive_negative (2790930.0) dépasse le seuil (900000.0) à 2024-12-08 18:13:55.361968
+Alerte: temperature (18.8) dépasse le seuil (12.0) à 2024-12-08 18:14:09.056973
+Alerte: tvoc (133.0) est inférieur au seuil (2000.0) à 2024-12-08 18:14:09.056973
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:14:09.056973
+Alerte: temperature (18.8) dépasse le seuil (12.0) à 2024-12-08 18:14:12.262636
+Alerte: tvoc (10.0) est inférieur au seuil (2000.0) à 2024-12-08 18:14:12.262636
+Alerte: illumination (2.0) est inférieur au seuil (10.0) à 2024-12-08 18:14:12.262636
+Alerte: puissance_reactive_negative (183.0) dépasse le seuil (150.0) à 2024-12-08 18:14:36.527034
+Alerte: energie_active_positive (2569713.0) dépasse le seuil (333333.0) à 2024-12-08 18:14:36.527034
+Alerte: energie_reactive_negative (2261796.0) dépasse le seuil (900000.0) à 2024-12-08 18:14:36.527034
+Alerte: temperature (18.7) dépasse le seuil (12.0) à 2024-12-08 18:14:42.361591
+Alerte: tvoc (43.0) est inférieur au seuil (2000.0) à 2024-12-08 18:14:42.361591
+Alerte: illumination (2.0) est inférieur au seuil (10.0) à 2024-12-08 18:14:42.361591
+Alerte: energie_reactive_negative (1228060.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:01.733113
+Alerte: puissance_reactive_negative (226.0) dépasse le seuil (150.0) à 2024-12-08 18:15:06.835899
+Alerte: energie_active_positive (2008238.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:06.835899
+Alerte: energie_reactive_negative (2517477.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:06.835899
+Alerte: energie_reactive_negative (1228060.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:07.960941
+Alerte: puissance_reactive_negative (341.0) dépasse le seuil (150.0) à 2024-12-08 18:15:10.885423
+Alerte: energie_reactive_negative (4105157.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:10.885423
+Alerte: temperature (17.4) dépasse le seuil (12.0) à 2024-12-08 18:15:11.751488
+Alerte: tvoc (120.0) est inférieur au seuil (2000.0) à 2024-12-08 18:15:11.751488
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:15:11.751488
+Alerte: energie_active_positive (2670631.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:16.564765
+Alerte: energie_reactive_negative (2032027.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:16.564765
+Alerte: puissance_active_positive (472.0) dépasse le seuil (200.0) à 2024-12-08 18:15:17.698074
+Alerte: puissance_reactive_negative (545.0) dépasse le seuil (150.0) à 2024-12-08 18:15:17.698074
+Alerte: energie_active_positive (7248584.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:17.698074
+Alerte: energie_reactive_negative (6811303.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:17.698074
+Alerte: puissance_reactive_negative (338.0) dépasse le seuil (150.0) à 2024-12-08 18:15:20.455293
+Alerte: energie_reactive_negative (4105143.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:20.455293
+Alerte: puissance_reactive_negative (248.0) dépasse le seuil (150.0) à 2024-12-08 18:15:41.450231
+Alerte: energie_active_positive (748498.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:41.450231
+Alerte: energie_reactive_negative (2790938.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:41.450231
+Alerte: energie_reactive_negative (1113182.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:42.981531
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:15:43.796962
+Alerte: energie_active_positive (886482.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:43.796962
+Alerte: energie_reactive_negative (3487552.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:43.796962
+Alerte: energie_active_positive (609239.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:45.031515
+Alerte: energie_reactive_negative (1495340.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:45.031515
+Alerte: puissance_reactive_negative (248.0) dépasse le seuil (150.0) à 2024-12-08 18:15:47.907165
+Alerte: energie_active_positive (748498.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:47.907165
+Alerte: energie_reactive_negative (2790938.0) dépasse le seuil (900000.0) à 2024-12-08 18:15:47.907165
+Alerte: energie_active_positive (335510.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:49.029723
+Alerte: energie_active_positive (335510.0) dépasse le seuil (333333.0) à 2024-12-08 18:15:55.461489
+Alerte: temperature (17.9) dépasse le seuil (12.0) à 2024-12-08 18:16:08.400858
+Alerte: tvoc (51.0) est inférieur au seuil (2000.0) à 2024-12-08 18:16:08.400858
+Alerte: illumination (2.0) est inférieur au seuil (10.0) à 2024-12-08 18:16:08.400858
+Alerte: temperature (17.6) dépasse le seuil (12.0) à 2024-12-08 18:16:09.710539
+Alerte: tvoc (54.0) est inférieur au seuil (2000.0) à 2024-12-08 18:16:09.710539
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:16:09.710539
+Alerte: temperature (19.5) dépasse le seuil (12.0) à 2024-12-08 18:16:11.245907
+Alerte: tvoc (64.0) est inférieur au seuil (2000.0) à 2024-12-08 18:16:11.245907
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:16:11.245907
+Alerte: puissance_reactive_negative (181.0) dépasse le seuil (150.0) à 2024-12-08 18:16:36.539884
+Alerte: energie_active_positive (2569718.0) dépasse le seuil (333333.0) à 2024-12-08 18:16:36.539884
+Alerte: energie_reactive_negative (2261802.0) dépasse le seuil (900000.0) à 2024-12-08 18:16:36.539884
+Alerte: temperature (16.9) dépasse le seuil (12.0) à 2024-12-08 18:16:36.840249
+Alerte: tvoc (110.0) est inférieur au seuil (2000.0) à 2024-12-08 18:16:36.840249
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:16:36.840249
+Alerte: energie_reactive_negative (1228064.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:01.839858
+Alerte: puissance_reactive_negative (226.0) dépasse le seuil (150.0) à 2024-12-08 18:17:06.855570
+Alerte: energie_active_positive (2008242.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:06.855570
+Alerte: energie_reactive_negative (2517485.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:06.855570
+Alerte: energie_reactive_negative (1228064.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:08.285294
+Alerte: puissance_reactive_negative (343.0) dépasse le seuil (150.0) à 2024-12-08 18:17:11.152651
+Alerte: energie_reactive_negative (4105169.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:11.152651
+Alerte: puissance_active_positive (472.0) dépasse le seuil (200.0) à 2024-12-08 18:17:16.577632
+Alerte: puissance_reactive_negative (544.0) dépasse le seuil (150.0) à 2024-12-08 18:17:16.577632
+Alerte: energie_active_positive (7248599.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:16.577632
+Alerte: energie_reactive_negative (6811321.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:16.577632
+Alerte: energie_active_positive (2670637.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:17.633623
+Alerte: energie_reactive_negative (2032031.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:17.633623
+Alerte: puissance_reactive_negative (341.0) dépasse le seuil (150.0) à 2024-12-08 18:17:20.432125
+Alerte: energie_reactive_negative (4105154.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:20.432125
+Alerte: temperature (17.1) dépasse le seuil (12.0) à 2024-12-08 18:17:38.156706
+Alerte: tvoc (97.0) est inférieur au seuil (2000.0) à 2024-12-08 18:17:38.156706
+Alerte: illumination (0.0) est inférieur au seuil (10.0) à 2024-12-08 18:17:38.156706
+Alerte: temperature (18.0) dépasse le seuil (12.0) à 2024-12-08 18:17:41.347340
+Alerte: tvoc (65.0) est inférieur au seuil (2000.0) à 2024-12-08 18:17:41.348339
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:17:41.348339
+Alerte: energie_active_positive (335510.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:41.428713
+Alerte: energie_reactive_negative (1113186.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:42.689416
+Alerte: energie_active_positive (609242.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:43.815875
+Alerte: energie_reactive_negative (1495345.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:43.815875
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:17:44.946219
+Alerte: energie_active_positive (886486.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:44.946219
+Alerte: energie_reactive_negative (3487561.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:44.946219
+Alerte: energie_active_positive (335510.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:47.192699
+Alerte: puissance_reactive_negative (248.0) dépasse le seuil (150.0) à 2024-12-08 18:17:48.319402
+Alerte: energie_active_positive (748498.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:48.319402
+Alerte: energie_reactive_negative (2790947.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:48.319402
+Alerte: puissance_reactive_negative (248.0) dépasse le seuil (150.0) à 2024-12-08 18:17:55.284027
+Alerte: energie_active_positive (748498.0) dépasse le seuil (333333.0) à 2024-12-08 18:17:55.284027
+Alerte: energie_reactive_negative (2790947.0) dépasse le seuil (900000.0) à 2024-12-08 18:17:55.284027
+Alerte: temperature (18.2) dépasse le seuil (12.0) à 2024-12-08 18:18:09.828010
+Alerte: tvoc (19.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:09.828010
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:09.828010
+Alerte: temperature (16.0) dépasse le seuil (12.0) à 2024-12-08 18:18:10.337006
+Alerte: tvoc (44.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:10.337006
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:10.337006
+Alerte: temperature (17.1) dépasse le seuil (12.0) à 2024-12-08 18:18:14.637394
+Alerte: tvoc (63.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:14.637394
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:14.637394
+Alerte: temperature (17.8) dépasse le seuil (12.0) à 2024-12-08 18:18:14.719401
+Alerte: tvoc (49.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:14.719401
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:14.719401
+Alerte: puissance_reactive_negative (181.0) dépasse le seuil (150.0) à 2024-12-08 18:18:36.495418
+Alerte: energie_active_positive (2569724.0) dépasse le seuil (333333.0) à 2024-12-08 18:18:36.495418
+Alerte: energie_reactive_negative (2261808.0) dépasse le seuil (900000.0) à 2024-12-08 18:18:36.495418
+Alerte: temperature (18.8) dépasse le seuil (12.0) à 2024-12-08 18:18:41.058009
+Alerte: co2 (1637.0) dépasse le seuil (1000.0) à 2024-12-08 18:18:41.058009
+Alerte: tvoc (29.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:41.058009
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:41.058009
+Alerte: temperature (18.4) dépasse le seuil (12.0) à 2024-12-08 18:18:56.108177
+Alerte: tvoc (93.0) est inférieur au seuil (2000.0) à 2024-12-08 18:18:56.108177
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:18:56.108177
+Alerte: energie_reactive_negative (1228067.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:01.945854
+Alerte: puissance_reactive_negative (225.0) dépasse le seuil (150.0) à 2024-12-08 18:19:06.862013
+Alerte: energie_active_positive (2008246.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:06.862013
+Alerte: energie_reactive_negative (2517492.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:06.862013
+Alerte: energie_reactive_negative (1228067.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:08.095538
+Alerte: temperature (16.7) dépasse le seuil (12.0) à 2024-12-08 18:19:10.137840
+Alerte: tvoc (89.0) est inférieur au seuil (2000.0) à 2024-12-08 18:19:10.137840
+Alerte: illumination (2.0) est inférieur au seuil (10.0) à 2024-12-08 18:19:10.137840
+Alerte: puissance_reactive_negative (341.0) dépasse le seuil (150.0) à 2024-12-08 18:19:10.956273
+Alerte: energie_reactive_negative (4105180.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:10.956273
+Alerte: energie_active_positive (2670643.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:16.793565
+Alerte: energie_reactive_negative (2032036.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:16.793565
+Alerte: puissance_active_positive (470.0) dépasse le seuil (200.0) à 2024-12-08 18:19:18.023470
+Alerte: puissance_reactive_negative (545.0) dépasse le seuil (150.0) à 2024-12-08 18:19:18.023470
+Alerte: energie_active_positive (7248616.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:18.023470
+Alerte: energie_reactive_negative (6811339.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:18.023470
+Alerte: puissance_reactive_negative (342.0) dépasse le seuil (150.0) à 2024-12-08 18:19:20.478660
+Alerte: energie_reactive_negative (4105166.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:20.478660
+Alerte: temperature (23.7) dépasse le seuil (12.0) à 2024-12-08 18:19:27.903781
+Alerte: tvoc (43.0) est inférieur au seuil (2000.0) à 2024-12-08 18:19:27.903781
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:19:27.903781
+Alerte: temperature (17.9) dépasse le seuil (12.0) à 2024-12-08 18:19:41.268285
+Alerte: tvoc (73.0) est inférieur au seuil (2000.0) à 2024-12-08 18:19:41.268285
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:19:41.268285
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:19:41.350276
+Alerte: energie_active_positive (748499.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:41.350276
+Alerte: energie_reactive_negative (2790955.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:41.350276
+Alerte: temperature (18.0) dépasse le seuil (12.0) à 2024-12-08 18:19:42.202491
+Alerte: tvoc (216.0) est inférieur au seuil (2000.0) à 2024-12-08 18:19:42.202491
+Alerte: illumination (1.0) est inférieur au seuil (10.0) à 2024-12-08 18:19:42.202491
+Alerte: energie_reactive_negative (1113189.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:42.701496
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:19:43.778490
+Alerte: energie_active_positive (886489.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:43.778490
+Alerte: energie_reactive_negative (3487569.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:43.778490
+Alerte: energie_active_positive (609245.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:44.897719
+Alerte: energie_reactive_negative (1495350.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:44.897719
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:19:47.719745
+Alerte: energie_active_positive (748499.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:47.719745
+Alerte: energie_reactive_negative (2790955.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:47.719745
+Alerte: energie_active_positive (335511.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:48.642752
+Alerte: puissance_active_positive (294.0) dépasse le seuil (200.0) à 2024-12-08 18:19:50.800684
+Alerte: puissance_reactive_negative (285.0) dépasse le seuil (150.0) à 2024-12-08 18:19:50.800684
+Alerte: energie_active_positive (4354803.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:50.800684
+Alerte: energie_reactive_negative (2270722.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:50.800684
+Alerte: puissance_active_positive (728.0) dépasse le seuil (200.0) à 2024-12-08 18:19:51.639371
+Alerte: puissance_reactive_negative (705.0) dépasse le seuil (150.0) à 2024-12-08 18:19:51.639371
+Alerte: energie_active_positive (9804196.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:51.639371
+Alerte: energie_reactive_negative (7036909.0) dépasse le seuil (900000.0) à 2024-12-08 18:19:51.639371
+Alerte: energie_active_positive (335511.0) dépasse le seuil (333333.0) à 2024-12-08 18:19:54.585922
+Alerte: energie_active_positive (335512.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:42.535332
+Alerte: energie_active_positive (609253.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:43.863331
+Alerte: puissance_reactive_negative (248.0) dépasse le seuil (150.0) à 2024-12-08 18:25:44.908284
+Alerte: energie_active_positive (886497.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:44.909280
+Alerte: energie_active_positive (335512.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:48.826341
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:25:50.219395
+Alerte: energie_active_positive (748501.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:50.220422
+Alerte: puissance_active_positive (270.0) dépasse le seuil (200.0) à 2024-12-08 18:25:50.622311
+Alerte: puissance_reactive_negative (284.0) dépasse le seuil (150.0) à 2024-12-08 18:25:50.622311
+Alerte: energie_active_positive (4354830.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:50.623344
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:25:56.667650
+Alerte: energie_active_positive (748501.0) dépasse le seuil (333333.0) à 2024-12-08 18:25:56.668695
+Alerte: temperature (17.9) dépasse le seuil (12.0) à 2024-12-08 18:26:09.135148
+Alerte: tvoc (51.0) est inférieur au seuil (2000.0) à 2024-12-08 18:26:09.135148
+Alerte: temperature (17.6) dépasse le seuil (12.0) à 2024-12-08 18:26:09.216151
+Alerte: tvoc (53.0) est inférieur au seuil (2000.0) à 2024-12-08 18:26:09.216151
+Alerte: temperature (19.5) dépasse le seuil (12.0) à 2024-12-08 18:26:10.820908
+Alerte: tvoc (64.0) est inférieur au seuil (2000.0) à 2024-12-08 18:26:10.821908
+Alerte: puissance_reactive_negative (200.0) dépasse le seuil (150.0) à 2024-12-08 18:26:33.629976
+Alerte: energie_active_positive (2670663.0) dépasse le seuil (333333.0) à 2024-12-08 18:26:33.629976
+Alerte: puissance_active_positive (423.0) dépasse le seuil (200.0) à 2024-12-08 18:26:34.761352
+Alerte: puissance_reactive_negative (606.0) dépasse le seuil (150.0) à 2024-12-08 18:26:34.761352
+Alerte: energie_active_positive (7248669.0) dépasse le seuil (333333.0) à 2024-12-08 18:26:34.762352
+Alerte: puissance_reactive_negative (179.0) dépasse le seuil (150.0) à 2024-12-08 18:26:36.548177
+Alerte: energie_active_positive (2569745.0) dépasse le seuil (333333.0) à 2024-12-08 18:26:36.549178
+Alerte: temperature (16.9) dépasse le seuil (12.0) à 2024-12-08 18:26:36.559182
+Alerte: tvoc (108.0) est inférieur au seuil (2000.0) à 2024-12-08 18:26:36.560181
+Alerte: puissance_active_positive (703.0) dépasse le seuil (200.0) à 2024-12-08 18:26:37.626181
+Alerte: puissance_reactive_negative (703.0) dépasse le seuil (150.0) à 2024-12-08 18:26:37.626181
+Alerte: energie_active_positive (9804275.0) dépasse le seuil (333333.0) à 2024-12-08 18:26:37.627180
+Alerte: energie_active_positive (1205754.0) dépasse le seuil (333333.0) à 2024-12-08 18:26:47.456687
+Alerte: puissance_reactive_negative (152.0) dépasse le seuil (150.0) à 2024-12-08 18:27:04.556866
+Alerte: energie_active_positive (981295.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:04.557862
+Alerte: puissance_reactive_negative (226.0) dépasse le seuil (150.0) à 2024-12-08 18:27:07.014303
+Alerte: energie_active_positive (2008263.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:07.015303
+Alerte: puissance_reactive_negative (343.0) dépasse le seuil (150.0) à 2024-12-08 18:27:11.006934
+Alerte: energie_active_positive (1486112.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:16.642958
+Alerte: puissance_reactive_negative (325.0) dépasse le seuil (150.0) à 2024-12-08 18:27:17.563143
+Alerte: energie_active_positive (4137178.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:17.564142
+Alerte: puissance_reactive_negative (264.0) dépasse le seuil (150.0) à 2024-12-08 18:27:18.688228
+Alerte: energie_active_positive (1445311.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:18.688228
+Alerte: puissance_reactive_negative (342.0) dépasse le seuil (150.0) à 2024-12-08 18:27:20.530706
+Alerte: puissance_active_positive (390.0) dépasse le seuil (200.0) à 2024-12-08 18:27:24.526020
+Alerte: puissance_reactive_negative (270.0) dépasse le seuil (150.0) à 2024-12-08 18:27:24.526020
+Alerte: energie_active_positive (4468153.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:24.526020
+Alerte: temperature (17.1) dépasse le seuil (12.0) à 2024-12-08 18:27:38.053789
+Alerte: tvoc (96.0) est inférieur au seuil (2000.0) à 2024-12-08 18:27:38.054789
+Alerte: temperature (18.0) dépasse le seuil (12.0) à 2024-12-08 18:27:41.190213
+Alerte: tvoc (62.0) est inférieur au seuil (2000.0) à 2024-12-08 18:27:41.190213
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:27:42.343257
+Alerte: energie_active_positive (748503.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:42.343257
+Alerte: puissance_reactive_negative (250.0) dépasse le seuil (150.0) à 2024-12-08 18:27:43.877907
+Alerte: energie_active_positive (886500.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:43.878873
+Alerte: energie_active_positive (609256.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:45.005277
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:27:48.178837
+Alerte: energie_active_positive (748503.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:48.179874
+Alerte: energie_active_positive (335513.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:49.280879
+Alerte: puissance_active_positive (270.0) dépasse le seuil (200.0) à 2024-12-08 18:27:50.638700
+Alerte: puissance_reactive_negative (282.0) dépasse le seuil (150.0) à 2024-12-08 18:27:50.639745
+Alerte: energie_active_positive (4354839.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:50.639745
+Alerte: energie_active_positive (335513.0) dépasse le seuil (333333.0) à 2024-12-08 18:27:55.245446
+Alerte: temperature (18.2) dépasse le seuil (12.0) à 2024-12-08 18:28:09.511740
+Alerte: tvoc (19.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:09.511740
+Alerte: temperature (15.9) dépasse le seuil (12.0) à 2024-12-08 18:28:09.937036
+Alerte: tvoc (45.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:09.938041
+Alerte: temperature (17.1) dépasse le seuil (12.0) à 2024-12-08 18:28:14.305672
+Alerte: tvoc (63.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:14.305672
+Alerte: temperature (17.8) dépasse le seuil (12.0) à 2024-12-08 18:28:14.378668
+Alerte: tvoc (49.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:14.378668
+Alerte: puissance_active_positive (423.0) dépasse le seuil (200.0) à 2024-12-08 18:28:33.661662
+Alerte: puissance_reactive_negative (608.0) dépasse le seuil (150.0) à 2024-12-08 18:28:33.661662
+Alerte: energie_active_positive (7248683.0) dépasse le seuil (333333.0) à 2024-12-08 18:28:33.661662
+Alerte: puissance_reactive_negative (200.0) dépasse le seuil (150.0) à 2024-12-08 18:28:34.681735
+Alerte: energie_active_positive (2670668.0) dépasse le seuil (333333.0) à 2024-12-08 18:28:34.682737
+Alerte: puissance_reactive_negative (181.0) dépasse le seuil (150.0) à 2024-12-08 18:28:36.804020
+Alerte: energie_active_positive (2569751.0) dépasse le seuil (333333.0) à 2024-12-08 18:28:36.804020
+Alerte: puissance_active_positive (723.0) dépasse le seuil (200.0) à 2024-12-08 18:28:37.592889
+Alerte: puissance_reactive_negative (705.0) dépasse le seuil (150.0) à 2024-12-08 18:28:37.592889
+Alerte: energie_active_positive (9804300.0) dépasse le seuil (333333.0) à 2024-12-08 18:28:37.592889
+Alerte: temperature (18.8) dépasse le seuil (12.0) à 2024-12-08 18:28:41.017221
+Alerte: co2 (1655.0) dépasse le seuil (1000.0) à 2024-12-08 18:28:41.018218
+Alerte: tvoc (30.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:41.018218
+Alerte: energie_active_positive (1205757.0) dépasse le seuil (333333.0) à 2024-12-08 18:28:47.375720
+Alerte: temperature (18.4) dépasse le seuil (12.0) à 2024-12-08 18:28:55.762510
+Alerte: tvoc (93.0) est inférieur au seuil (2000.0) à 2024-12-08 18:28:55.762510
+Alerte: puissance_reactive_negative (151.0) dépasse le seuil (150.0) à 2024-12-08 18:29:04.672324
+Alerte: energie_active_positive (981296.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:04.672324
+Alerte: temperature (16.7) dépasse le seuil (12.0) à 2024-12-08 18:29:09.832126
+Alerte: tvoc (88.0) est inférieur au seuil (2000.0) à 2024-12-08 18:29:09.833125
+Alerte: puissance_reactive_negative (341.0) dépasse le seuil (150.0) à 2024-12-08 18:29:11.125737
+Alerte: puissance_reactive_negative (263.0) dépasse le seuil (150.0) à 2024-12-08 18:29:16.652055
+Alerte: energie_active_positive (1445312.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:16.652055
+Alerte: puissance_reactive_negative (324.0) dépasse le seuil (150.0) à 2024-12-08 18:29:17.493326
+Alerte: energie_active_positive (4137183.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:17.494320
+Alerte: energie_active_positive (1486113.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:18.702763
+Alerte: puissance_reactive_negative (342.0) dépasse le seuil (150.0) à 2024-12-08 18:29:20.503816
+Alerte: puissance_active_positive (389.0) dépasse le seuil (200.0) à 2024-12-08 18:29:24.639245
+Alerte: puissance_reactive_negative (269.0) dépasse le seuil (150.0) à 2024-12-08 18:29:24.640300
+Alerte: energie_active_positive (4468166.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:24.641293
+Alerte: temperature (23.9) dépasse le seuil (12.0) à 2024-12-08 18:29:27.552596
+Alerte: tvoc (42.0) est inférieur au seuil (2000.0) à 2024-12-08 18:29:27.553592
+Alerte: temperature (17.9) dépasse le seuil (12.0) à 2024-12-08 18:29:40.817663
+Alerte: tvoc (73.0) est inférieur au seuil (2000.0) à 2024-12-08 18:29:40.817663
+Alerte: energie_active_positive (335513.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:42.151095
+Alerte: temperature (18.0) dépasse le seuil (12.0) à 2024-12-08 18:29:42.847718
+Alerte: tvoc (215.0) est inférieur au seuil (2000.0) à 2024-12-08 18:29:42.847718
+Alerte: energie_active_positive (609258.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:43.991384
+Alerte: puissance_reactive_negative (251.0) dépasse le seuil (150.0) à 2024-12-08 18:29:45.220460
+Alerte: energie_active_positive (886502.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:45.220460
+Alerte: energie_active_positive (335513.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:47.646537
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:29:48.804939
+Alerte: energie_active_positive (748503.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:48.804939
+Alerte: puissance_active_positive (294.0) dépasse le seuil (200.0) à 2024-12-08 18:29:50.751476
+Alerte: puissance_reactive_negative (284.0) dépasse le seuil (150.0) à 2024-12-08 18:29:50.751476
+Alerte: energie_active_positive (4354849.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:50.752527
+Alerte: puissance_reactive_negative (249.0) dépasse le seuil (150.0) à 2024-12-08 18:29:54.846169
+Alerte: energie_active_positive (748503.0) dépasse le seuil (333333.0) à 2024-12-08 18:29:54.846169
+Alerte: temperature (15.1) dépasse le seuil (12.0) à 2024-12-08 18:30:10.707597
+Alerte: temperature (16.5) dépasse le seuil (12.0) à 2024-12-08 18:30:11.898570
+Alerte: temperature (16.6) dépasse le seuil (12.0) à 2024-12-08 18:30:12.356729
+Alerte: temperature (18.3) dépasse le seuil (12.0) à 2024-12-08 18:30:13.054124
+Alerte: puissance_active_positive (426.0) dépasse le seuil (200.0) à 2024-12-08 18:30:34.794990
+Alerte: puissance_active_positive (727.0) dépasse le seuil (200.0) à 2024-12-08 18:30:37.587326
+Alerte: puissance_active_positive (426.0) dépasse le seuil (200.0) à 2024-12-08 18:30:40.417591
+Alerte: temperature (18.9) dépasse le seuil (12.0) à 2024-12-08 18:30:42.154577
+Alerte: temperature (16.5) dépasse le seuil (12.0) à 2024-12-08 18:30:57.617617
+Alerte: temperature (19.1) dépasse le seuil (12.0) à 2024-12-08 18:30:58.028131
+Alerte: temperature (19.0) dépasse le seuil (12.0) à 2024-12-08 18:30:59.967915
+Alerte: puissance_active_positive (389.0) dépasse le seuil (200.0) à 2024-12-08 18:31:24.759341
+Alerte: temperature (17.9) dépasse le seuil (0.0) à 2024-12-08 18:33:08.182360
+Alerte: temperature (22.0) dépasse le seuil (0.0) à 2024-12-08 18:33:08.689235
+Alerte: temperature (18.7) dépasse le seuil (0.0) à 2024-12-08 18:34:09.309410
+Alerte: temperature (18.8) dépasse le seuil (0.0) à 2024-12-08 18:34:11.696907
+Alerte: temperature (18.7) dépasse le seuil (0.0) à 2024-12-08 18:34:41.668676
+Alerte: temperature (17.3) dépasse le seuil (0.0) à 2024-12-08 18:35:11.136069
+Alerte: temperature (17.9) dépasse le seuil (0.0) à 2024-12-08 18:36:08.915724
+Alerte: temperature (17.6) dépasse le seuil (0.0) à 2024-12-08 18:36:09.928473
+Alerte: temperature (19.5) dépasse le seuil (0.0) à 2024-12-08 18:36:10.464395
+Alerte: temperature (16.8) dépasse le seuil (0.0) à 2024-12-08 18:36:36.260109
+Alerte: puissance_active_positive (486.0) dépasse le seuil (200.0) à 2024-12-08 18:50:08.478303
+Alerte: puissance_active_positive (825.0) dépasse le seuil (200.0) à 2024-12-08 18:50:28.768139
+Alerte: puissance_active_positive (427.0) dépasse le seuil (200.0) à 2024-12-08 18:50:33.697595
+Alerte: puissance_active_positive (392.0) dépasse le seuil (200.0) à 2024-12-08 18:50:50.563655
+Alerte: puissance_active_positive (388.0) dépasse le seuil (200.0) à 2024-12-08 18:52:50.585633
+Alerte: temperature (47.6) dépasse le seuil (25.0) à 2024-12-08 18:53:02.362841
+Alerte: temperature (47.6) dépasse le seuil (25.0) à 2024-12-08 18:53:04.700141
+Alerte: puissance_active_positive (387.0) dépasse le seuil (200.0) à 2024-12-08 18:53:24.712859
+Alerte: puissance_active_positive (745.0) dépasse le seuil (200.0) à 2024-12-08 18:53:36.156739
+Alerte: puissance_active_positive (254.0) dépasse le seuil (200.0) à 2024-12-08 18:53:37.285198
+Alerte: puissance_active_positive (486.0) dépasse le seuil (200.0) à 2024-12-08 18:54:08.500096
+Alerte: puissance_active_positive (818.0) dépasse le seuil (200.0) à 2024-12-08 18:54:28.689014
+Alerte: puissance_active_positive (426.0) dépasse le seuil (200.0) à 2024-12-08 18:54:33.703774
+Alerte: puissance_active_positive (386.0) dépasse le seuil (200.0) à 2024-12-08 18:54:50.618055
