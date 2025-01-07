@@ -28,6 +28,10 @@ target/
 # Inclusions
 !lib/**
 
+
+backend/backend/__pycache__/
+venv/
+
 # Compiled Files
 *.class
 bin/
