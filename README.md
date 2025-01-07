@@ -11,27 +11,30 @@ Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquemen
 
 Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. [liens utiles](#liens-utiles)), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
 
-## [Table de matières]
+## Table de matière
 - [Équipe](#équipe)
 - [Contexte général](#contexte-général)
   - [Dépôt initial](#dépôt-initial)
   - [Liens Utiles](#liens-utiles)
-- [Réalisations](#realisations)
-- [Gestion de projet & qualité](#gestion-de-projet-&-qualité)
+- [Réalisations](#réalisations)
+- [Gestion de projet & qualité](#gestion-de-projet-et-qualité)
 
 ## Équipe
 
-Projet est réalisé par::
+Projet est réalisé par
 
-- [Naila BON](https://github.com/naila-bon)
-- [Adrien FAURÉ](https://github.com/AirbnbEcoPlus)
-- [Esteban GARNIL](https://github.com/estebanGarnil)
-- [Zachary IVARS](https://github.com/Trailmix05)
-- [Yahya MAGAZ](https://github.com/Magaz-Yahya)
-- [Ophélie WINTERHOFF](https://github.com/ophewinx)
-- [Mete YALÇIN](https://github.com/MetelsCoding)
+| Nom du membre de l'équipe | Rôle dans l'équipe |
+|---------------------------|--------------------|
+| [Naila BON](https://github.com/naila-bon) | Développeuse |
+| [Adrien FAURÉ](https://github.com/AirbnbEcoPlus) | Développeur | 
+| [Esteban GARNIL](https://github.com/estbanGarnil) | Développeur |
+| [Zachary IVARS](https://github.com/Traimix05) | Product Owner, Développeur |
+| [Yahya MAGAZ](https://github.com/Magaz-Yahya) | SCRUM Master, Développeur |
+| [Ophélie WINTERHOFF](https://github.com/ophewinx) | Cheffe d'équipe, Développeuse |
+| [Mete YALÇIN](https://github.com/MetelsCoding) | Développeur|
 
-Tuteur/tutrice enseignant(e) de l'équipe : [Cassandre Vey](cassandre.vey@irit.fr) & [Remi Boulle](remi.boulle@@univ-tlse2.fr)
+
+Tuteur/tutrice enseignant(e) de l'équipe : [Cassandre Vey](cassandre.vey@irit.fr) & [Remi Boulle](remi.boulle@univ-tlse2.fr)
 
 ## Contexte général
 
@@ -66,7 +69,7 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
 
-## Gestion de projet & Qualité
+## Gestion de projet et Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
 Utilisez pour cela les fonctionnalités de GitHub pour les [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
@@ -80,15 +83,3 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
-
-Voici un exemple d'évaluation :
-
-ifdef::env-github[]
-image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image]
-endif::[]
-
-ifndef::env-github[]
-++++
-<iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image"></iframe>
-++++
-endif::[]
