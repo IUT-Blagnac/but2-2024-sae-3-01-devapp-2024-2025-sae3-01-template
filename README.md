@@ -7,6 +7,8 @@
 
 **Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT2 Informatique de l'IUT de Blagnac.**
 
+[![Quality Gate Status](https://sonarqube.endide.com/api/project_badges/measure?project=saerecherche&metric=alert_status&token=sqb_42450a8aee8dd783bac82122f9c36dd4b062a832)](https://sonarqube.endide.com/dashboard?id=saerecherche)
+
 ## Table de matière
 - [Équipe](#équipe)
 - [Gestion de projet & qualité](#gestion-de-projet-et-qualité)
