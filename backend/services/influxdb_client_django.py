@@ -4,22 +4,15 @@ from django.conf import settings
 import os 
 
 
-INFLUXDB_CONFIG = {
-    "url": "https://influxdb.endide.com",  # URL de l'instance InfluxDB
-    "token": "QFKdKWJHe9ir4doaKlPBFKpxl7JUGR14YMDa-wjcKQ18aw_0b2hZaRDypBoXKjHvKpU9eWzXuZf9eCnbupklyw==",  # Jeton d'accès (InfluxDB v2+)
-    "org": "sae",  # Organisation (InfluxDB v2+)
-    "bucket": "sensors",  # Bucket cible
-}
-
 class InfluxDB:
     def __init__(self):
         self.client = None
 
         self.config = {
-            "url":INFLUXDB_CONFIG["url"],
-            "token":INFLUXDB_CONFIG["token"],
-            "org":INFLUXDB_CONFIG["org"],
-            "bucket":INFLUXDB_CONFIG["bucket"]
+            "url":settings.INFLUXDB_CONFIG["url"],
+            "token":settings.INFLUXDB_CONFIG["token"],
+            "org":settings.INFLUXDB_CONFIG["org"],
+            "bucket":settings.INFLUXDB_CONFIG["bucket"]
         }
         self.connexion(
             self.config["url"],
