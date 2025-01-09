@@ -31,6 +31,8 @@ target/
 
 backend/backend/__pycache__/
 venv/
+env/
+backend/.env
 
 # Compiled Files
 *.class
