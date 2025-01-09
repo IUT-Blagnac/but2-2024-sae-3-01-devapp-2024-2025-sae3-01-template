@@ -19,8 +19,14 @@ COPY backend/requirements.txt /app/
 # Installer les dépendances Python
 RUN pip install --no-cache-dir -r requirements.txt
 
+
+
 # Copier tout le code source du backend
 COPY backend /app/
+
+RUN python manage.py tailwind install
+
+RUN npm config set cache /app/.npm-cache --global
 
 # Exposer le port pour Django
 EXPOSE 8000

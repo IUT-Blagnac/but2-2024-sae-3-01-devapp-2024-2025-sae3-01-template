@@ -33,6 +33,8 @@ media/
 *.css.map
 *.js.map
 
+backend/.npm-cache/
+
 # Configurations Docker
 *.env
 docker-compose.override.yml
@@ -44,6 +46,7 @@ docker-compose*.yaml~
 *.orig
 .DS_Store
 Thumbs.db
+package-lock.json
 
 # Ignorer les migrations compilées
 **/migrations/__pycache__/
