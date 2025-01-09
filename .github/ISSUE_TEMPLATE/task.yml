@@ -3,21 +3,14 @@ description: Une tâche associée à une User Story
 title: "[Task]: "
 labels: ["task"]
 body:
-  - type: input
-    id: task_title
-    attributes:
-      label: Titre de la tâche
-      description: Résumez brièvement le travail à accomplir.
-      placeholder: "Ex. Implémenter la fonctionnalité X"
-    validations:
-      required: true
-
   - type: textarea
     id: task_description
     attributes:
       label: Description de la tâche
       description: Détaillez les étapes ou le travail requis pour accomplir cette tâche.
       placeholder: "Ex. Décrire le code à implémenter ou les actions à effectuer."
+    validations:
+      required: true
 
   - type: dropdown
     id: priority
