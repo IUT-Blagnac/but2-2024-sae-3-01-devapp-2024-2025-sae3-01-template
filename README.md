@@ -33,7 +33,7 @@ L'équipe de ce projet est constitué de 7 personnes. Voici leurs noms, rôles, 
 |[Mete YALÇIN](https://github.com/MetelsCoding) | Développeur| .% |
 
 
-Tutrice & tuteur enseignant.e.s de l'équipe : [Cassandre Vey](cassandre.vey@irit.fr) & [Remi Boulle](remi.boulle@univ-tlse2.fr)
+Tutrice & tuteur enseignant.e.s de l'équipe : [Cassandre Vey](cassandre.vey@irit.fr), [Remi Boulle](remi.boulle@univ-tlse2.fr) & [Esther Pendaries](esther.pendaries@univ-tlse2.fr)
 
 ## Gestion de projet et Qualité
 
@@ -43,27 +43,31 @@ Nous utilisons pour cela les fonctionnalités de GitHub pour les [Releases](http
 - Version courante : [v0.0.1]()
 - Lien vers la doc technique : [Documentation Technique](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Doc%20Technique/Technical_Document.md)
 - Lien vers la doc utilisateur : [Documentation Utilisateur](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Documentation%20Utilisateur/User_Document.md)
-- Liste des User Stories avec leurs (ToDo/Ongoing/Done) et % restant :
+- Liste des User Stories avec leurs (User Stories/Todo/In progress/In review/Done) et % restant :
 
   | User Story | Lien vers User Story | Étape de réalisation | % restant |
   |------------|----------------------|----------------------|-----------|
   | Visualisation en temps réel de l'état des salles | [US1](https://github.com/orgs/IUT-Blagnac/projects/296/views/1?pane=issue&itemId=93015121&issue=IUT-Blagnac%7CSAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02%7C2) | ToDo | 100% |
   | Consultation de l'historique de l'état des salles | [US2](https://github.com/orgs/IUT-Blagnac/projects/296/views/1?pane=issue&itemId=93017220&issue=IUT-Blagnac%7CSAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02%7C3) | ToDo | 100% |
   
-- Tests unitaires et plans de [Cahier de tests](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Cahier%20de%20tests/Test_Book.md)
+- Tests unitaires et [cahier de tests](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Cahier%20de%20tests/Test_Book.md)
 - Indicateurs de qualité du code (dette technique) :
+- Lien vers (Backlog)[https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/issues]
+- Liste des Sprints :
+  - (Sprint 1)[https://github.com/orgs/IUT-Blagnac/projects/296]
+  - (Sprint 2)[]
 - ...
 
 ## Contexte général
 
-Nous avons été demandé de faire un site web ainsi qu'un API pour le bâtiment de recherche. Ce site web regroupe les informations de différents capteurs (temperature, humidité, si une porte est fermé ou pas, ...) des différents salles de trouvant dans le bâtiment de recherche. Nous devons présenter ces informations de manière explicite et compréhensible, avec un historique, l'utilisation de la carte du bâtiment de recherche, utilisation de graphiques pour démontrer l'évolution sur une lapse de temps, ainsi que d'autres demandes et fonctionnalités.
+Il nous a été demandé de faire un site web ainsi qu'une API pour le bâtiment de recherche. Ce site web regroupe les informations de différents capteurs (température, humidité, l'état d'une porte, ...) des différentes salles dans le bâtiment C. Nous devons présenter ces informations de manière explicite et compréhensible, grâce à une carte interactive du bâtiment de recherche affichant les données en temps réels. Mais aussi, nous devons afficher un historique sous forme de graphiques pour démontrer l'évolution sur une une période, ainsi que d'autres demandes et fonctionnalités.
 
 L'éxistant est constitué de seulement un base de données InfluxDB.
 
 Les contraintes sont :
-  - Utilisation d'une base de données InfluxDB
-  - Création d'une API supplémentaire permettant de faire des requêtes et du filtrage sur les données
-  - Utilisation du langage de programmation `Python` afin de faciliter sa modification ultérieurement
+  - utilisation d'une base de données InfluxDB
+  - création d'une API supplémentaire permettant de faire des requêtes et du filtrage sur les données
+  - utilisation du langage de programmation `Python` afin de faciliter sa modification ultérieurement
 
 
 ### Liens utiles
