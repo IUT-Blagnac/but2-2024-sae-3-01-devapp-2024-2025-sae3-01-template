@@ -107,4 +107,8 @@ je noterais le sprint 2 et le sprint 3 car très insuffisant sur ce sprint.
 Pas de CR de réunion ni d'ODJ 
 Attention il en faut au moins 2 au cours du projet
 
+### retour RB
+
+Même si c'est Cassandre Vey la PO, merci de faire un point d'étape avec moi dans la semaine avec démo de ce qui est fonctionnel
+
 
