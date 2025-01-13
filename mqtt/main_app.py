@@ -1,39 +1,19 @@
-import paho.mqtt.client as mqtt
-import ssl
-from influx_manager import SensorManager;
+from fastapi import FastAPI
+from api_manager import api_router
+from mqtt_manager import start_mqtt
 
+app = FastAPI()
 
+# Inclure les routes WebSocket
+app.include_router(api_router)
 
+# Lancer le client MQTT dans un thread séparé
+if __name__ == "__main__":
+    import threading
+    import uvicorn
 
-from influxdb_client import InfluxDBClient, Point
-from influxdb_client.client.write_api import SYNCHRONOUS
+    mqtt_thread = threading.Thread(target=start_mqtt, daemon=True)
+    mqtt_thread.start()
 
-
-
-
-def on_connect(client, userdata, flags, reason_code, properties):
-    if reason_code == 0:
-        print("Connected to MQTT broker")
-        client.subscribe(TOPIC)
-    else:
-        print(f"Failed to connect, return code {reason_code}")
-
-def on_message(client, userdata, msg):
-    payload = msg.payload.decode()
-    print(f"Received MQTT message: {msg.topic} -> {payload}")
-
-mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
-mqtt_client.on_connect = on_connect
-mqtt_client.on_message = on_message
-mqtt_client.enable_logger()
-mqtt_client.username_pw_set(USERNAME, PASSWORD)
-mqtt_client.tls_set()
-
-
-influx_manager = SensorManager();
-influx_manager.write_sensor_data("301","room2024", "door", {"contact": True})
-
-mqtt_client.connect(BROKER, PORT, 60)
-#mqtt_client.tls_insecure_set(True)
-mqtt_client.loop_forever()
-
+    # Lancer le serveur FastAPI
+    uvicorn.run(app, host="0.0.0.0", port=8001)

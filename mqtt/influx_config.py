@@ -8,13 +8,11 @@ load_dotenv()
 
 class InfluxDBConfig:
     def __init__(self):
-        # Configuration depuis les variables d'environnement
         self.url = os.getenv('INFLUXDB_URL', 'http://localhost:8086')
         self.token = os.getenv('INFLUXDB_TOKEN', 'your-token-here')
         self.org = os.getenv('INFLUXDB_ORG', 'your-org-here')
         self.bucket = os.getenv('INFLUXDB_BUCKET', 'your-bucket-here')
         
-        # Initialisation des clients à None
         self._client = None
         self._write_api = None
         self._query_api = None
@@ -60,16 +58,5 @@ class InfluxDBConfig:
             self._write_api = None
             self._query_api = None
 
-    def test_connection(self):
-        """Teste la connexion à InfluxDB"""
-        try:
-            self.connect()
-            # Tente une requête simple
-            self._query_api.query(f'from(bucket:"{self.bucket}") |> range(start: -1m) |> limit(n:1)')
-            return True
-        except Exception as e:
-            print(f"Erreur de connexion à InfluxDB: {str(e)}")
-            return False
 
-# Création d'une instance unique
 influx_db = InfluxDBConfig()
