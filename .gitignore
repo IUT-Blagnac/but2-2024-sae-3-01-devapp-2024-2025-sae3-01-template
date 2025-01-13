@@ -3,6 +3,7 @@
 *.pyo
 *.pyd
 __pycache__/
+migrations/
 *.swp
 
 # Environnements virtuels
@@ -64,3 +65,5 @@ dist/
 
 # Fichiers secrets
 secret_key.txt
+
+shell.nix

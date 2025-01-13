@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-vrfzi81%klv^h_k=$%m2h0-!*msmh$x!gngkkjvbjld9x-$8ty
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tailwind",
     "theme",
+    "web",
+    "webapi"
 ]
 
 
