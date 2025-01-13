@@ -88,3 +88,23 @@ Les documents se trouverons dans un premier temps un répertoir appelé `Documen
 - un répertoir `Documentation Techinque` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour la documentation technique.
 - un répertoir `Documentation Utilisateur` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour la documentation utilisateur.
 - un répertoir `Cahier de tests` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour le cahier de tests.
+
+## retour GPO
+
+### retour Backlog produit
+Backlog avec 2 US seulement mais bien rédigées.
+note 4/5
+
+### retour sprint 1
+Dans le projet je dois avoir un dashboard avec 4 colonnes  : US du sprint, tâches à faire, en cours  et terminées et cela pour chaque sprint. Je n'est pas de milestone pour les tâches ou les US. 
+J'ai seulement 3 taches dans le sprint 1 assignées alors qu'il est censé être terminé. 
+Docs avec seulement les titres.
+Pas de release ! (au moins une maquette  à ce stade). 
+Pas de cahier de tests.
+je noterais le sprint 2 et le sprint 3 car très insuffisant sur ce sprint.
+
+### communication
+Pas de CR de réunion ni d'ODJ 
+Attention il en faut au moins 2 au cours du projet
+
+
