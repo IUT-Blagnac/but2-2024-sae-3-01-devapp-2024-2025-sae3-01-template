@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, "base.html")
+
+def carte(request):
+    return render(request, "carte.html")
