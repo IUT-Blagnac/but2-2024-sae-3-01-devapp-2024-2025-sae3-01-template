@@ -37,7 +37,7 @@ Tutrice & tuteur enseignant.e.s de l'équipe : [Cassandre Vey](cassandre.vey@iri
 
 ## Gestion de projet et Qualité
 
-Chaque sprint (semaine et demi) nous livrons une nouvelle version de notre application (release).
+Chaque sprint (une semaine et demi) nous livrons une nouvelle version de notre application (release).
 Nous utilisons pour cela les fonctionnalités de GitHub pour les [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
 
 - Version courante : [v0.0.1]()
@@ -52,11 +52,16 @@ Nous utilisons pour cela les fonctionnalités de GitHub pour les [Releases](http
   
 - Tests unitaires et [cahier de tests](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Cahier%20de%20tests/Test_Book.md)
 - Indicateurs de qualité du code (dette technique) :
-- Lien vers (Backlog)[https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/issues]
+- Lien vers [Backlog](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/issues)
 - Liste des Sprints :
-  - (Sprint 1)[https://github.com/orgs/IUT-Blagnac/projects/296]
+  - [Sprint 1](https://github.com/orgs/IUT-Blagnac/projects/296)
   - (Sprint 2)[]
-- ...
+- Liste des ODJs et leurs CRs :
+
+  | Ordres du Jour | Compte-rendus |
+  |----------------|---------------|
+  | [ODJ 07-01-2025](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/07-01-2025/Ordre%20Du%20Jour%2007-01-2025.pdf) | [CR 07-01-2025](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/07-01-2025/CR%20Re%CC%81union%2007-01-2025.pdf)|
+
 
 ## Contexte général
 
@@ -88,3 +93,27 @@ Les documents se trouverons dans un premier temps un répertoir appelé `Documen
 - un répertoir `Documentation Techinque` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour la documentation technique.
 - un répertoir `Documentation Utilisateur` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour la documentation utilisateur.
 - un répertoir `Cahier de tests` contenant toutes les ressources pour la documentation ainsi que le fichier Markdown pour le cahier de tests.
+
+## retour GPO
+
+### retour Backlog produit
+Backlog avec 2 US seulement mais bien rédigées.
+note 4/5
+
+### retour sprint 1
+Dans le projet je dois avoir un dashboard avec 4 colonnes  : US du sprint, tâches à faire, en cours  et terminées et cela pour chaque sprint. Je n'est pas de milestone pour les tâches ou les US. 
+J'ai seulement 3 taches dans le sprint 1 assignées alors qu'il est censé être terminé. 
+Docs avec seulement les titres.
+Pas de release ! (au moins une maquette  à ce stade). 
+Pas de cahier de tests.
+je noterais le sprint 2 et le sprint 3 car très insuffisant sur ce sprint.
+
+### communication
+Pas de CR de réunion ni d'ODJ 
+Attention il en faut au moins 2 au cours du projet
+
+### retour RB
+
+Même si c'est Cassandre Vey la PO, merci de faire un point d'étape avec moi dans la semaine avec démo de ce qui est fonctionnel
+
+
