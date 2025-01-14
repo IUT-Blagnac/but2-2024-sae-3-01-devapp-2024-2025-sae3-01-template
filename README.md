@@ -37,7 +37,7 @@ Tutrice & tuteur enseignant.e.s de l'équipe : [Cassandre Vey](cassandre.vey@iri
 
 ## Gestion de projet et Qualité
 
-Chaque sprint (semaine et demi) nous livrons une nouvelle version de notre application (release).
+Chaque sprint (une semaine et demi) nous livrons une nouvelle version de notre application (release).
 Nous utilisons pour cela les fonctionnalités de GitHub pour les [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
 
 - Version courante : [v0.0.1]()
@@ -52,11 +52,16 @@ Nous utilisons pour cela les fonctionnalités de GitHub pour les [Releases](http
   
 - Tests unitaires et [cahier de tests](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/Cahier%20de%20tests/Test_Book.md)
 - Indicateurs de qualité du code (dette technique) :
-- Lien vers (Backlog)[https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/issues]
+- Lien vers [Backlog](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/issues)
 - Liste des Sprints :
-  - (Sprint 1)[https://github.com/orgs/IUT-Blagnac/projects/296]
+  - [Sprint 1](https://github.com/orgs/IUT-Blagnac/projects/296)
   - (Sprint 2)[]
-- ...
+- Liste des ODJs et leurs CRs :
+
+  | Ordres du Jour | Compte-rendus |
+  |----------------|---------------|
+  | [ODJ 07-01-2025](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/07-01-2025/Ordre%20Du%20Jour%2007-01-2025.pdf) | [CR 07-01-2025](https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-DB-Recherche-Equipe-3A02/blob/master/Documentation/07-01-2025/CR%20Re%CC%81union%2007-01-2025.pdf)|
+
 
 ## Contexte général
 
