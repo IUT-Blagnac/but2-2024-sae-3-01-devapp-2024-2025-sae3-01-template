@@ -6,6 +6,9 @@ def home(request):
     return render(request, "base.html")
 
 
+def map(request):
+    return render(request, "map.html")
+
 def historique(request):
     context = {
         'salles': [
