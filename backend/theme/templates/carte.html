@@ -1,23 +1,30 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+    <head>
     <title>Django Tailwind</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		{% tailwind_css %}
-	</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% tailwind_css %}
+        <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
+    </head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
+    <body class="bg-gray-50 font-serif leading-normal tracking-normal">
+        <div class="container mx-auto">
 
-			<!-- On affiche la carte ici -->
-			<div id="map" class="w-full h-screen">
-				<!-- Ici s'affichera la carte -->
-				<object type="image/svg+xml" data="{% static 'carteSalle.svg' %}" class="w-full h-full"></object>
-			</div>
+            <!-- On affiche la carte ici -->
+            <div id="map" class="w-full h-screen">
+                <!-- Ici s'affichera la carte -->
+                <object type="image/svg+xml" data="{% static 'carteSalle.svg' %}" class="w-full h-full"></object>
+            </div>
 
-		</div>
-	</body>
+            <button 
+                data-popover='{"salle": "{{ salle.name }}", "temperature": "{{ salle.temperature }}", "humidite": "{{ salle.humidite }}", "co2": "{{ salle.co2 }}", "eqco2": "{{ salle.eqco2 }}"}'
+                class="px-3 py-1 bg-slate-800 text-white rounded hover:bg-slate-700">
+                Voir données
+            </button>
+        </div>
+        <script src="{% static 'popup.js' %}"></script>
+    </body>
 </html>
