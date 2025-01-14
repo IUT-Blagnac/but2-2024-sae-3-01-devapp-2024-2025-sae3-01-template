@@ -1,11 +1,17 @@
 from dataclasses import dataclass
 from datetime import datetime, time, timezone
-import json
 import pytz
 from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
+import os 
+import json
 
-from backend.backend import settings
+INFLUXDB_CONFIG = {
+    "url": "https://influxdb.endide.com",  # URL de l'instanceù InfluxDB
+    "token": "QFKdKWJHe9ir4doaKlPBFKpxl7JUGR14YMDa-wjcKQ18aw_0b2hZaRDypBoXKjHvKpU9eWzXuZf9eCnbupklyw==",  # Jeton d'accès (InfluxDB v2+)
+    "org": "sae",  # Organisation (InfluxDB v2+)
+    "bucket": "sensors",  # Bucket cible
+}
 
 @dataclass(frozen=True)
 class CapteurResult:
@@ -73,10 +79,10 @@ class InfluxDB:
         self.client = None
 
         self.config = {
-            "url":settings.INFLUXDB_CONFIG["url"],
-            "token":settings.INFLUXDB_CONFIG["token"],
-            "org":settings.INFLUXDB_CONFIG["org"],
-            "bucket":settings.INFLUXDB_CONFIG["bucket"]
+            "url":INFLUXDB_CONFIG["url"],
+            "token":INFLUXDB_CONFIG["token"],
+            "org":INFLUXDB_CONFIG["org"],
+            "bucket":INFLUXDB_CONFIG["bucket"]
         }
         self.connexion(
             self.config["url"],
@@ -84,6 +90,8 @@ class InfluxDB:
             self.config["org"],
             self.config["bucket"]
         )
+
+        self._last_result = None
 
     def __call__(self, flux_query):
         """
