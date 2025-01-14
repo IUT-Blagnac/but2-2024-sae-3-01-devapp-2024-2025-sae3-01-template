@@ -1,4 +1,4 @@
-# Documentation Utilisateur - DailyBankApp
+# Documentation Utilisateur - Recherches DashBoard
 
 ## Sommaire
 - [Introduction](#i-introduction)
@@ -27,8 +27,8 @@
  -- Pour démarrer l'application : --
 
 ## V. Navigation dans l'Application
- -- ### Fonctionnalités : --
- -- Description des fonctionnalités --
+ -- **Fonctionnalités :** --
+ -- **Description des fonctionnalités** --
 ---
 
  -- **Support et Assistance :** Si vous rencontrez un problème, veuillez contacter le support de l'application. --
