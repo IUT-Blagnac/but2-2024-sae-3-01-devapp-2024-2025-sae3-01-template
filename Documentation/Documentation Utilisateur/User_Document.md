@@ -19,16 +19,17 @@
  -- Présentation de l'application
 
 ## III. Installation de l'Application
- -- **Prérequis :** --
- -- **Comment l'installer :** --
+ -- Prérequis : --
+ -- Comment l'installer : --
 
 ## IV. Configuration et Lancement de l'Application
  -- Avant de lancer l'application, assurez-vous de --
  -- Pour démarrer l'application : --
 
 ## V. Navigation dans l'Application
- -- **Fonctionnalités :** --
- -- **Description des fonctionnalités** --
+ -- Fonctionnalités --
+ -- Description de ces fonctionnalités --
+ 
 ---
 
  -- **Support et Assistance :** Si vous rencontrez un problème, veuillez contacter le support de l'application. --
