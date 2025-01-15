@@ -1,34 +1,10 @@
+{% extends 'base.html' %}
 {% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Django Tailwind</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% tailwind_css %}
 
-        <style>
-          /* Style pour le popup */
-          .popup {
-              display: none;
-              position: absolute;
-              background-color: #333;
-              color: white;
-              padding: 1rem;
-              border-radius: 0.5rem;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          }
-          .popup .close-btn {
-              cursor: pointer;
-              color: red;
-              float: right;
-          }
-      </style>
-    </head>
 
-    <body class="bg-gray-50 font-serif leading-normal tracking-normal">
-        <svg width="100vw" height="100vh" viewBox="0 0 923 491" fill="none" xmlns="http://www.w3.org/2000/svg">
+{% block body %}
+<div class="flex-1 p-8">
+        <svg id="map" width="100vw" height="100vh" viewBox="0 0 923 491" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Carte des salles 1" clip-path="url(#clip0_20_3)">
             <g id="layer1">
             <g id="g4548">
@@ -4369,8 +4345,8 @@
     </clipPath>
 </defs>
 </svg>
+</div>
 
-<body class="bg-gray-50 font-serif leading-normal tracking-normal">
     <div class="container mx-auto">
         <!-- Boutons déclencheurs -->
         <button class="trigger-btn" data-room="C101">Afficher Données Salle C101</button>
@@ -4382,15 +4358,14 @@
         <button class="trigger-btn" data-room="C107">Afficher Données Salle C107</button>
         <button class="trigger-btn" data-room="C108">Afficher Données Salle C108</button>
 
-        <!-- endroit pour que le js puisse récupérer les données -->
-        <div id="popup" class="popup">
-            <span class="close-btn">&times;</span>
-            <h2 id="popup-title">Données en [room name]</h2>
+        <div id="popup" class="popup hidden absolute bg-gray-800 text-white p-4 rounded-lg shadow-lg">
+            <span class="close-btn text-red-500 cursor-pointer float-right">&times;</span>
+            <h2 id="popup-title" class="text-xl">Données en [room name]</h2>
             <p>Température : <span id="temp-value">[valeur récupérée]</span></p>
             <p>Humidité : <span id="humidity-value">[valeur récupérée]</span></p>
-        </div>
+        </div> 
     </div>
 
     <script src="{% static 'popup.js' %}"></script>
-</body>
-</html>
+
+    {% endblock %}
