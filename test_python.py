@@ -1,18 +1,25 @@
 from dataclasses import dataclass
 from datetime import datetime, time, timezone
-import json
 import pytz
 from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
+import os 
+import json
 
-from backend.backend import settings
+INFLUXDB_CONFIG = {
+    "url": "https://influxdb.endide.com",  # URL de l'instanceù InfluxDB
+    "token": "QFKdKWJHe9ir4doaKlPBFKpxl7JUGR14YMDa-wjcKQ18aw_0b2hZaRDypBoXKjHvKpU9eWzXuZf9eCnbupklyw==",  # Jeton d'accès (InfluxDB v2+)
+    "org": "sae",  # Organisation (InfluxDB v2+)
+    "bucket": "sensors",  # Bucket cible
+}
 
 @dataclass
 class listCapteur:
-    capteur = []
-    start_time = datetime
-    end_time = datetime
-
+    capteur : list
+    start_time : datetime
+    end_time : datetime
+    tri_value : str
+    tri_parametre : str
 
 @dataclass(frozen=True)
 class CapteurResult:
@@ -80,10 +87,10 @@ class InfluxDB:
         self.client = None
 
         self.config = {
-            "url":settings.INFLUXDB_CONFIG["url"],
-            "token":settings.INFLUXDB_CONFIG["token"],
-            "org":settings.INFLUXDB_CONFIG["org"],
-            "bucket":settings.INFLUXDB_CONFIG["bucket"]
+            "url":INFLUXDB_CONFIG["url"],
+            "token":INFLUXDB_CONFIG["token"],
+            "org":INFLUXDB_CONFIG["org"],
+            "bucket":INFLUXDB_CONFIG["bucket"]
         }
         self.connexion(
             self.config["url"],
@@ -91,6 +98,8 @@ class InfluxDB:
             self.config["org"],
             self.config["bucket"]
         )
+
+        self._last_result = None
 
     def __call__(self, flux_query):
         """
@@ -285,6 +294,28 @@ class InfluxDB:
 
         return all_differents
     
+    def get_capteur_by_list(self, parametre_tri : str, liste_capteur, start_time=None, end_time=None):
+        dictionnaire_capteur = {}
+
+        for capteur in liste_capteur:
+            param_attribut = getattr(capteur, parametre_tri)
+            if param_attribut not in dictionnaire_capteur:
+                dictionnaire_capteur[param_attribut] = listCapteur(
+                    capteur=[capteur],
+                    start_time=start_time,
+                    end_time=end_time,
+                    tri_value=param_attribut,
+                    tri_parametre=parametre_tri
+                )
+            else:
+                dictionnaire_capteur[param_attribut].capteur += [capteur]
+        
+        return dictionnaire_capteur
+
+client = InfluxDB()
+result = client.get(return_object=True)
+di = client.get_capteur_by_list("room_id", result)
+print(len(di))
 
 
 
