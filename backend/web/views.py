@@ -7,3 +7,7 @@ def home(request):
 
 def carte(request):
     return render(request, "carte.html")
+
+
+def map(request):
+    return render(request, "map.html")

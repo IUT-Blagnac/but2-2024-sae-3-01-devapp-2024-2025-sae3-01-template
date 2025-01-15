@@ -23,12 +23,14 @@ class SensorManager:
         return list(all_fields)  
 
     def fetch_sensor_types(self):
+        """Récupere tout les types de sensors depuis django"""
         response = requests.get(API_URL + "/sensors_types")
         if response.status_code == 200:
             return response.json()
         raise Exception(f"Failed to fetch sensor types: {response.status_code}")
 
     def detect_sensor_type(self, values: dict) -> str:
+        """Detecte le type de capteur"""
         for sensor_type, sensor_info in self.SENSOR_TYPES.items():
             fields = sensor_info["fields"]  # Liste des champs attendus pour ce capteur
             if all(field in values for field in fields):
@@ -36,6 +38,7 @@ class SensorManager:
         return 'generic_sensor' 
 
     def write_sensor_data(self, sensor_id, room_id,  values):
+        """Trie les valeurs et les enregistre dans le infludb"""
         filtered_values = {key: value for key, value in values.items() if key in self.all_fields}
         sensor_type = self.detect_sensor_type(filtered_values)
         print(sensor_type)
