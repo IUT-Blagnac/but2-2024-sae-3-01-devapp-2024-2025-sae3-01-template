@@ -8,7 +8,6 @@
 - [Navigation dans l'Application](#v-navigation-dans-lapplication)
 
 ![Logo IUT](Logo_IUT.png)
-![Logo Université Jean Jaurès](Logo_Universite_Toulouse.jpeg)
 
 ---
 
