@@ -13,6 +13,14 @@ INFLUXDB_CONFIG = {
     "bucket": "sensors",  # Bucket cible
 }
 
+@dataclass
+class listCapteur:
+    capteur : list
+    start_time : datetime
+    end_time : datetime
+    tri_value : str
+    tri_parametre : str
+
 @dataclass(frozen=True)
 class CapteurResult:
     time : datetime
@@ -285,6 +293,29 @@ class InfluxDB:
                     all_differents.append(item)  # Ajouter le plus récent
 
         return all_differents
+    
+    def get_capteur_by_list(self, parametre_tri : str, liste_capteur, start_time=None, end_time=None):
+        dictionnaire_capteur = {}
+
+        for capteur in liste_capteur:
+            param_attribut = getattr(capteur, parametre_tri)
+            if param_attribut not in dictionnaire_capteur:
+                dictionnaire_capteur[param_attribut] = listCapteur(
+                    capteur=[capteur],
+                    start_time=start_time,
+                    end_time=end_time,
+                    tri_value=param_attribut,
+                    tri_parametre=parametre_tri
+                )
+            else:
+                dictionnaire_capteur[param_attribut].capteur += [capteur]
+        
+        return dictionnaire_capteur
+
+client = InfluxDB()
+result = client.get(return_object=True)
+di = client.get_capteur_by_list("room_id", result)
+print(len(di))
 
 
 

@@ -7,6 +7,13 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 
 from backend.backend import settings
 
+@dataclass
+class listCapteur:
+    capteur = []
+    start_time = datetime
+    end_time = datetime
+
+
 @dataclass(frozen=True)
 class CapteurResult:
     time : datetime
@@ -277,6 +284,7 @@ class InfluxDB:
                     all_differents.append(item)  # Ajouter le plus récent
 
         return all_differents
+    
 
 
 
