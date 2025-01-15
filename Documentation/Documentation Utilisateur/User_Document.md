@@ -1,3 +1,4 @@
+
 # Documentation Utilisateur - Recherches DashBoard
 
 ## Sommaire
@@ -32,4 +33,3 @@
 ---
 
  -- **Support et Assistance :** Si vous rencontrez un problème, veuillez contacter le support de l'application. --
-
