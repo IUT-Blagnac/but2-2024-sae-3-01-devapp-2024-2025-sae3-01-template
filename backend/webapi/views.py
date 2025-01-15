@@ -8,18 +8,25 @@ class SensorTypeOut(Schema):
     fields: list
     description: str
 
+db = InfluxDB()
+
 router = Router()
 router2 = Router()
 
 @router.get("", response={200: list[CapteurResult]})
 def get_all_last_sensors(request):
-    """
-    Récupère les dernières valeurs pour tous les capteurs.
-    """
-    # Initialisation de l'objet InfluxDB
-    db = InfluxDB()
     db.get(return_object=True)
     return db.get_all_last()
+    
+
+@router.get("/{room_id}", response={200: list[CapteurResult]})
+def get_data_by_room(request, room_id: str, field: str = None):
+    if field:
+        result = db.get(room_id=[room_id], field=field, return_object=True)
+    else:
+        result = db.get(room_id=[room_id], return_object=True)
+    return db.get_all_last(result)
+
 
 @router2.get("", response={200: dict[str, SensorTypeOut]})
 def get_sensor_types(request):
