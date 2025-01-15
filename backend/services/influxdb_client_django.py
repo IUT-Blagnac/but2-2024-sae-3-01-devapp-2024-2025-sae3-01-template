@@ -5,7 +5,7 @@ import pytz
 from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
 
-from backend.backend import settings
+from backend import settings
 
 @dataclass
 class listCapteur:

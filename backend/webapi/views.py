@@ -1,16 +1,27 @@
 from .models import SensorType
 from django.http import JsonResponse
-from ninja import NinjaAPI, Schema 
+from ninja import Router, Schema 
+from services.influxdb_client_django import CapteurResult, InfluxDB
 
 # Create your views here.
 class SensorTypeOut(Schema):
     fields: list
     description: str
 
+router = Router()
+router2 = Router()
 
-router = NinjaAPI()
+@router.get("", response={200: list[CapteurResult]})
+def get_all_last_sensors(request):
+    """
+    Récupère les dernières valeurs pour tous les capteurs.
+    """
+    # Initialisation de l'objet InfluxDB
+    db = InfluxDB()
+    db.get(return_object=True)
+    return db.get_all_last()
 
-@router.get("/sensors_types", response={200: dict[str, SensorTypeOut]})
+@router2.get("", response={200: dict[str, SensorTypeOut]})
 def get_sensor_types(request):
     """
     Récupère tous les types de capteurs depuis la base de données.
