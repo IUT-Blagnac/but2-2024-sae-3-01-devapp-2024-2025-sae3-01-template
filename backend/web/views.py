@@ -27,3 +27,4 @@ def historique(request):
         ],
     }
     return render(request, 'historique.html', context)
+
