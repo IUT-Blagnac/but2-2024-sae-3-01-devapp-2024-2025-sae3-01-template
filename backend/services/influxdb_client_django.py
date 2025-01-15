@@ -286,3 +286,6 @@ class InfluxDB:
 
         return all_differents
     
+
+
+
