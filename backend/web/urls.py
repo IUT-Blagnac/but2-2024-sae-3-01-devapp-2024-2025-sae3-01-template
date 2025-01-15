@@ -5,5 +5,4 @@ urlpatterns = [
     path("", views.home, name="map"),
     path("map", views.map, name="map"),
     path("historique", views.historique, name="historique"),
-    path("map", views.map, name="map")
 ]
