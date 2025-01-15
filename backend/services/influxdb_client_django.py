@@ -31,16 +31,15 @@ class CapteurResult:
     def compare_to_other(self, other) -> bool:
         """
         Compare cette instance avec une autre instance de CapteurResult,
-        en ignorant les champs 'time' et 'time_fr'.
+        en ignorant les champs 'time' et 'time_fr', ainsi que value.
 
         :param other: Une autre instance de CapteurResult
-        :return: True si les champs (sauf time et time_fr) sont identiques, False sinon
+        :return: True si les champs (sauf time et time_fr et value) sont identiques, False sinon
         """
         if not isinstance(other, CapteurResult):
             raise TypeError("La comparaison est uniquement possible avec une autre instance de CapteurResult.")
         
         return (
-            self.value == other.value and
             self.field == other.field and
             self.room_id == other.room_id and
             self.sensor_id == other.sensor_id and
@@ -226,6 +225,8 @@ class InfluxDB:
             all_query += f'\n|> last()'
         if return_object:        
             result = self(all_query)
+            if(not result):
+                return []
             self._last_result = self.transform_json_to_dataclass(result)
             return self._last_result
 

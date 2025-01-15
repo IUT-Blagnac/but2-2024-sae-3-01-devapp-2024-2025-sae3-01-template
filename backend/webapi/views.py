@@ -1,3 +1,4 @@
+from datetime import datetime
 from .models import SensorType
 from django.http import JsonResponse
 from ninja import Router, Schema 
@@ -20,12 +21,24 @@ def get_all_last_sensors(request):
     
 
 @router.get("/{room_id}", response={200: list[CapteurResult]})
-def get_data_by_room(request, room_id: str, field: str = None):
-    if field:
-        result = db.get(room_id=[room_id], field=field, return_object=True)
-    else:
-        result = db.get(room_id=[room_id], return_object=True)
-    return db.get_all_last(result)
+def get_data_by_room(request, room_id: str, sensor_type: list[str] = None, field: str = None, start_time: str = None, end_time: str = None):
+
+    start_time_dt = None
+    end_time_dt = None
+
+    if start_time:
+        start_time_dt = datetime.fromisoformat(start_time).isoformat()  # Convertir en datetime puis en isoformat
+    if end_time:
+        end_time_dt = datetime.fromisoformat(end_time).isoformat() 
+
+
+    result = db.get(room_id=[room_id], sensor_type=sensor_type, start_time=start_time_dt, end_time=end_time_dt,  field=field, return_object=True)
+
+    if not result:
+        return []
+
+
+    return result
 
 
 @router2.get("", response={200: dict[str, SensorTypeOut]})
