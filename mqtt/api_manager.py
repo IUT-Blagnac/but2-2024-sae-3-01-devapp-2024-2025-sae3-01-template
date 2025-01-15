@@ -28,6 +28,9 @@ manager = ConnectionManager()
 
 @api_router.websocket("/ws/notify")
 async def websocket_endpoint(websocket: WebSocket):
+    """
+    Point d'entrée du websocket permettant de notifier l'app centrale
+    """
     await manager.connect(websocket)
     try:
         while True:

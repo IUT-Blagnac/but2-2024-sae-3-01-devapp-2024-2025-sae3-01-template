@@ -15,6 +15,7 @@ PASSWORD = os.getenv('MQTT_PASSWORD', '')
 influx_manager = SensorManager()
 
 def on_connect(client, userdata, flags, reason_code, properties=None):
+    """Handler executer une fois que le broker est connecté"""
     if reason_code == 0:
         print("Connected to MQTT broker")
         client.subscribe(TOPIC)
@@ -22,6 +23,7 @@ def on_connect(client, userdata, flags, reason_code, properties=None):
         print(f"Failed to connect, return code {reason_code}")
 
 def on_message(client, userdata, msg):
+    """Handler executer a chaque fois que un message est envoyer"""
     try:
         topic = msg.topic
         payload = msg.payload.decode()
@@ -63,4 +65,5 @@ mqtt_client.tls_set()
 mqtt_client.connect(BROKER, PORT, 60)
 
 def start_mqtt():
+    """Execute le client mqtt"""
     mqtt_client.loop_forever()
