@@ -2,29 +2,49 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <title>Django Tailwind</title>
+        <title>Django Tailwind</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {% tailwind_css %}
         <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
+        <style>
+            /* Style pour le popup en mode sombre */
+            .popup {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                color: white;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .popup .close-btn {
+                cursor: pointer;
+                color: red;
+                float: right;
+            }
+        </style>
     </head>
 
     <body class="bg-gray-50 font-serif leading-normal tracking-normal">
         <div class="container mx-auto">
+            <!-- Boutons déclencheurs -->
+            <button class="trigger-btn" data-room="Salle 1">Afficher Données Salle 1</button>
+            <button class="trigger-btn" data-room="Salle 2">Afficher Données Salle 2</button>
 
-            <!-- On affiche la carte ici -->
-            <div id="map" class="w-full h-screen">
-                <!-- Ici s'affichera la carte -->
-                <object type="image/svg+xml" data="{% static 'carteSalle.svg' %}" class="w-full h-full"></object>
+			<!-- endroit pour que le js puisse récupérer les données -->
+            <div id="popup" class="popup">
+                <span class="close-btn">&times;</span>
+                <h2 id="popup-title">Données en [room name]</h2>
+                <p>Température : <span id="temp-value">[valeur récupérée]</span></p>
+                <p>Humidité : <span id="humidity-value">[valeur récupérée]</span></p>
+                <p>CO2 : <span id="co2-value">[valeur récupérée]</span></p>
+                <p>eCO2 : <span id="eco2-value">[valeur récupérée]</span></p>
             </div>
-
-            <button 
-                data-popover='{"salle": "{{ salle.name }}", "temperature": "{{ salle.temperature }}", "humidite": "{{ salle.humidite }}", "co2": "{{ salle.co2 }}", "eqco2": "{{ salle.eqco2 }}"}'
-                class="px-3 py-1 bg-slate-800 text-white rounded hover:bg-slate-700">
-                Voir données
-            </button>
         </div>
-        <script src="{% static 'popup.js' %}"></script>
+
+
+		<script src="{% static 'popup.js' %}"></script>
     </body>
 </html>
