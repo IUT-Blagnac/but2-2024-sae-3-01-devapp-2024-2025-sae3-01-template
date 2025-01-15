@@ -1,15 +1,6 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-    <title>Django Tailwind</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		{% tailwind_css %}
-	</head>
+{% extends 'base.html' %} {% block body %}
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+	
 		<svg width="100vw" height="100vh" viewBox="0 0 244.22516 139.95673" id="svg14486" xmlns="http://www.w3.org/2000/svg">
             <defs id="defs14480">
               <clipPath id="clipPath9878">
@@ -4271,26 +4262,8 @@
               </g>
             </g>
           </svg>
-          <div class="relative">
-            <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-gray-900 px-4 py-2 rounded-full">
-
-              <a href="/map" class="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-full" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M9 20L3 17V4L9 7M9 20L15 17M9 20V7M15 17L21 20V7L15 4M15 17V4M9 7L15 4" />
-                </svg>
-                <span>MAP</span>
-              </a>
-
-              <a href="/historique" class="flex items-center space-x-2 px-4 py-2 bg-gray-700 text-white rounded-full" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M12 8v4l3 3M12 20a8 8 0 100-16 8 8 0 000 16z"/>
-                </svg>
-                <span>HISTORIQUE</span>
-              </a>
-            </div>
-
-          </div>
           
           
-	</body>
-</html>
+          
+	
+{% endblock %}

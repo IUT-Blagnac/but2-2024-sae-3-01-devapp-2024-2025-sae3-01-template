@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request, "base.html")
+    return render(request, "map.html")
 
 def map(request):
     return render(request, "map.html")
@@ -27,4 +27,3 @@ def historique(request):
         ],
     }
     return render(request, 'historique.html', context)
-
