@@ -1,13 +1,43 @@
-// Permet de récupérer des données simulées ou réelles
-function fetchData(roomName) {
+
+// Récupère les données des capteurs depuis l'API locale
+// En cas d'erreur, renvoie un tableau vide pour éviter les crashs
+async function getSensorData() {
+    try {
+        const response = await fetch('http://localhost:8000/api/sensors');
+        return await response.json();
+    } catch (error) {
+        console.error('Erreur lors de la récupération des données:', error);
+        return [];
+    }
+}
+
+// Ne garde que les données qui correspondent à la salle sélectionnée
+function filterRoomData(data, roomId) {
+    return data.filter(sensor => sensor.room_id === roomId);
+}
+
+// Cherche la dernière valeur disponible pour un type de mesure spécifique
+// Par exemple: température, humidité, etc.
+function getLatestValue(roomData, field) {
+    const sensorData = roomData.find(sensor => sensor.field === field);
+    return sensorData ? sensorData.value : null;
+}
+
+// Fonction principale qui récupère soit les données réelles des capteurs,
+// soit des données de test si les capteurs ne répondent pas
+async function fetchData(roomName) {
+    // On essaie d'abord de récupérer les vraies données
+    const sensorData = await getSensorData();
+    const roomData = filterRoomData(sensorData, roomName);
+    
     const realData = {
-        temperature: null,
-        humidity: null,
-        co2: null,
-        eco2: null
+        temperature: getLatestValue(roomData, 'temperature'),
+        humidity: getLatestValue(roomData, 'humidity'),
+        co2: getLatestValue(roomData, 'co2'),
+        eco2: getLatestValue(roomData, 'eco2')
     };
 
-    // Données de test si les données réelles ne sont pas disponibles
+    // Valeurs par défaut au cas où les capteurs ne renvoient rien
     const testData = {
         temperature: '22°C',
         humidity: '45%',
@@ -15,61 +45,64 @@ function fetchData(roomName) {
         eco2: '450 ppm'
     };
 
-    return {
-        temperature: realData.temperature || testData.temperature,
-        humidity: realData.humidity || testData.humidity,
-        co2: realData.co2 || testData.co2,
-        eco2: realData.eco2 || testData.eco2
+    // On ajoute les unités de mesure aux valeurs récupérées
+    const formattedData = {
+        temperature: realData.temperature ? `${realData.temperature}°C` : testData.temperature,
+        humidity: realData.humidity ? `${realData.humidity}%` : testData.humidity,
     };
+
+    return formattedData;
 }
 
-// Permet d'afficher le popup
-function showPopup(element) {
+// Permet de faire l'affichage de la fenêtre popup avec les informations de la salle
+async function showPopup(element) {
     const popup = document.getElementById('popup');
     const roomName = element.getAttribute('data-room');
 
-    // récupération des données
-    const data = fetchData(roomName);
+    // On va chercher les dernières données disponibles
+    const data = await fetchData(roomName);
 
-    // on met à jour les valeurs du popup
+    // On update le view avec les nouvelles données
     document.getElementById('popup-title').innerText = `Données en ${roomName}`;
     document.getElementById('temp-value').innerText = data.temperature;
     document.getElementById('humidity-value').innerText = data.humidity;
-    document.getElementById('co2-value').innerText = data.co2;
-    document.getElementById('eco2-value').innerText = data.eco2;
 
-    // permet de positionner le popup à côté de l'élément cliqué
+
+    // On positionne la fenêtre popup juste à côté de l'élément cliqué
     const rect = element.getBoundingClientRect();
     popup.style.top = `${rect.top + window.scrollY + element.offsetHeight}px`;
     popup.style.left = `${rect.left + window.scrollX}px`;
 
-    // Afficher le popup
+    // On rend la fenêtre visible
     popup.style.display = 'block';
 }
 
-// Permet de cacher le popup
+// Masque la fenêtre popup quand on veut la fermer
 function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-// Permet de cacher le popup en cliquant à l'extérieur
+// Ferme automatiquement la popup si on clique en dehors
+// Mais la garde ouverte si on clique sur un bouton ou dans la popup
 document.addEventListener('click', (event) => {
     const popup = document.getElementById('popup');
-    const isClickInside = popup.contains(event.target) || event.target.classList.contains('trigger-btn') || event.target.hasAttribute('data-room');
+    const isClickInside = popup.contains(event.target) || 
+                         event.target.classList.contains('trigger-btn') || 
+                         event.target.hasAttribute('data-room');
     if (!isClickInside) {
         hidePopup();
     }
 });
 
-// Permet d'ajouter les événements aux boutons
+// Configure les boutons pour qu'ils affichent les données quand on clique dessus
 document.querySelectorAll('.trigger-btn').forEach(button => {
     button.addEventListener('click', () => showPopup(button));
 });
 
-// Permet d'ajouter les événements aux salles
+// Fait la même chose pour les zones cliquables sur le plan
 document.querySelectorAll('path[data-room]').forEach(path => {
     path.addEventListener('click', () => showPopup(path));
 });
 
-// Permet d'ajouter l'événement au bouton de fermeture
+// Ajoute la fonction de fermeture au bouton × de la popup
 document.querySelector('.close-btn').addEventListener('click', hidePopup);
