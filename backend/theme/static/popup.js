@@ -1,7 +1,5 @@
-
 // Permet de récupérer des données simulées ou réelles
 function fetchData(roomName) {
-
     const realData = {
         temperature: null,
         humidity: null,
@@ -26,10 +24,9 @@ function fetchData(roomName) {
 }
 
 // Permet d'afficher le popup
-function showPopup(button) {
-
+function showPopup(element) {
     const popup = document.getElementById('popup');
-    const roomName = button.getAttribute('data-room');
+    const roomName = element.getAttribute('data-room');
 
     // récupération des données
     const data = fetchData(roomName);
@@ -41,9 +38,9 @@ function showPopup(button) {
     document.getElementById('co2-value').innerText = data.co2;
     document.getElementById('eco2-value').innerText = data.eco2;
 
-    // permet de positionner le popup à côté du bouton 
-    const rect = button.getBoundingClientRect();
-    popup.style.top = `${rect.top + window.scrollY + button.offsetHeight}px`;
+    // permet de positionner le popup à côté de l'élément cliqué
+    const rect = element.getBoundingClientRect();
+    popup.style.top = `${rect.top + window.scrollY + element.offsetHeight}px`;
     popup.style.left = `${rect.left + window.scrollX}px`;
 
     // Afficher le popup
@@ -58,7 +55,7 @@ function hidePopup() {
 // Permet de cacher le popup en cliquant à l'extérieur
 document.addEventListener('click', (event) => {
     const popup = document.getElementById('popup');
-    const isClickInside = popup.contains(event.target) || event.target.classList.contains('trigger-btn');
+    const isClickInside = popup.contains(event.target) || event.target.classList.contains('trigger-btn') || event.target.hasAttribute('data-room');
     if (!isClickInside) {
         hidePopup();
     }
@@ -67,6 +64,11 @@ document.addEventListener('click', (event) => {
 // Permet d'ajouter les événements aux boutons
 document.querySelectorAll('.trigger-btn').forEach(button => {
     button.addEventListener('click', () => showPopup(button));
+});
+
+// Permet d'ajouter les événements aux salles
+document.querySelectorAll('path[data-room]').forEach(path => {
+    path.addEventListener('click', () => showPopup(path));
 });
 
 // Permet d'ajouter l'événement au bouton de fermeture
