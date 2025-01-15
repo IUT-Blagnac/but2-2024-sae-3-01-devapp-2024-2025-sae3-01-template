@@ -2,8 +2,6 @@
 *.pyc
 *.pyo
 *.pyd
-__pycache__/
-migrations/
 *.swp
 
 # Environnements virtuels
