@@ -8,7 +8,7 @@
 - [Configuration et Lancement de l'Application](#iv-configuration-et-lancement-de-lapplication)
 - [Navigation dans l'Application](#v-navigation-dans-lapplication)
 
-![Logo IUT](./images/Logo_IUT.png)
+![Logo IUT](../images/Logo_IUT.png)
 
 ---
 
